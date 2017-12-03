@@ -1,0 +1,115 @@
+body {
+	background-color: #000;
+	color: white;
+}
+
+/* --- Home page --- */
+
+#settingsMenuInner {
+	border: 1px solid #1c16c7 !important;
+}
+
+#homeScreen {
+	background-size: initial;
+	background-position: top right;
+}
+
+#homeScreen .homeTitle {
+	top: initial;
+	bottom: 300px;
+	left: 150px;
+	transform: initial;
+}
+
+#homeScreen .overlay {
+	opacity: 0;
+}
+
+#socialMenu button {
+	border: 1px solid #ff0000 !important; //
+	border: 1px solid #0f0bb3 !important;
+}
+
+.menu-item, .menu-open-button {
+	background: #1f15c7 !important;
+	/* 	background: #0f0bb3 !important; */
+}
+
+.menu-item:hover {
+	color: #0f0bb3 !important;
+}
+
+#settingsMenuToggle {
+	color: #0f0bb3;
+}
+
+#settingsMenuToggle:hover {
+	color: #009fff;
+}
+
+/*--- Contact page ---*/
+
+#bodyBackground {
+	background-image: url("../../themes/rebelGalaxy/nano.jpg");
+}
+
+#formWindow {
+	width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 230px;
+}
+
+#formWindow .formContainer {
+	background: rgba(0,0,0,0.7);
+	box-shadow: 0 0 10px 6px #1f15c7;
+	border-radius: 10px;
+	padding: 50px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#formWindow .formContainer h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px #1f15c7;
+    font-size: 40px;
+}
+
+#bodyBackground div {
+	background-color: rgba(0,0,0,0.5);
+}
+
+#formWindow input:not([type=submit]), textarea {
+	 background-color: #1f1d1d;
+	 color: #c3c3c3;
+	 box-shadow: inset 0px 0px 16px 0px #190ed0;
+}
+    
+#formWindow input:not([type=submit]):focus, textarea:focus {
+	box-shadow: 0 0 10px 4px #1f15c7;
+}  		
+    	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

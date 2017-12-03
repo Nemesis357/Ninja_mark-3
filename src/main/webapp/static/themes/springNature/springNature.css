@@ -1,0 +1,107 @@
+body {
+    background-color: #008040;
+    color: black;
+}
+
+/* --- Home page --- */
+
+#settingsMenuInner{
+	border: 1px solid #00ff40 !important;
+}
+
+#settingsMenuInner {
+	color: #c29f55;
+}
+
+#homeScreen .overlay {
+	background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+	opacity: 0.3;
+}
+
+#socialMenu button {
+	border: 1px solid #00ff40 !important;
+}
+
+.menu-item, .menu-open-button {
+	background: #00ff408c !important;
+}
+
+.menu-item:hover {
+	color: #00ff408c !important;
+}
+
+#settingsMenuToggle {
+	color: #00ff408c;
+}
+
+#settingsMenuToggle:hover {
+	color: #25ff00;
+}
+
+/* --- Contact page --- */
+
+#bodyBackground {
+	background-image: url("../../themes/springNature/tree.jpg");
+}
+
+#bodyBackground div {
+	background-color: rgba(0,0,0,0.2);
+}
+
+#formWindow {
+	height: -webkit-fill-available;
+}
+
+#formWindow .formContainer {
+	position: absolute;
+    right: 20%;
+    min-width: 450px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#formWindow .formContainer h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-style: italic;
+    color: #847561;
+    text-shadow: 1px 1px #8d7f6b;
+}
+
+#formWindow input:not([type=submit]), textarea {
+	background-color: #ffffff00;
+    border-bottom: 1px solid #8d7f6b;
+}
+
+#formWindow label {
+	color: #847561;
+    text-shadow: 1px 1px #8d7f6b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

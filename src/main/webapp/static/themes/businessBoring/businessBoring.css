@@ -1,0 +1,73 @@
+body {
+    background-color: #d0d0d0;
+    color: black;
+}
+
+#settingsMenuInner{
+	border: 1px solid #ada793 !important;
+}
+
+#homeScreen .overlay {
+	background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+	opacity: 0.4;
+}
+
+#socialMenu button {
+	border: 1px solid #ffffff !important;
+}
+
+.menu-item, .menu-open-button {
+	background: #ada794 !important;
+}
+
+.menu-item:hover {
+	color: #ada794 !important;
+}
+
+#settingsMenuToggle {
+	color: #ada794;
+}
+
+#settingsMenuToggle:hover {
+	color: #795548;
+}
+
+/* --- Contact page --- */
+
+#bodyBackground {
+	background-image: url("../../themes/businessBoring/desk_1.jpg");
+}
+
+#bodyBackground div {
+	background-color: rgba(0,0,0,0.2);
+}
+
+#formWindow {
+	height: -webkit-fill-available;
+}
+
+#formWindow .formContainer {
+	position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 450px;
+}
+
+#formWindow .formContainer h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-style: italic;
+    color: #75732f;
+}
+
+#formWindow input:not([type=submit]), textarea {
+	background-color: #ffffff00;
+    border-bottom: 1px solid #75732f;
+}
+
+#formWindow label {
+	color: #75732f;
+}
+	
