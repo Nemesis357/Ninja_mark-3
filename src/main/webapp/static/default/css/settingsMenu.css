@@ -144,7 +144,6 @@
   width: 70%;
 }
 #settingsMenuInner ul li {
-  padding: 10px 0;
   cursor: pointer;
   width: 100%;
 }
@@ -153,6 +152,8 @@
   text-decoration: none;
   position: relative;
   z-index: 10;
+  padding: 10px 0;
+  display: block;
 }
 #settingsMenuInner ul li a i {
   margin: 0 5px;
