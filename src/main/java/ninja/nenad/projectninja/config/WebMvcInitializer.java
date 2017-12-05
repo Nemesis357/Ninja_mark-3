@@ -1,22 +1,22 @@
 package ninja.nenad.projectninja.config;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import org.springframework.web.servlet.DispatcherServlet;
-
-public class WebMvcInitializer implements WebApplicationInitializer {
+public class WebMvcInitializer extends  AbstractAnnotationConfigDispatcherServletInitializer{
 
 	@Override
-	public void onStartup(ServletContext servletContext) throws ServletException {
-		AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
-		rootContext.register(WebMvcConfig.class);
-		ServletRegistration.Dynamic registration = servletContext.addServlet("dispatcher", new DispatcherServlet(rootContext));
-		registration.addMapping("/");
-		registration.setLoadOnStartup(1);
+	protected Class<?>[] getRootConfigClasses() {
+		return new Class<?> [] {WebMvcConfig.class};
+//		return null;
 	}
 
+	@Override
+	protected Class<?>[] getServletConfigClasses() {
+		return null;
+	}
+
+	@Override
+	protected String[] getServletMappings() {
+		return new String[] {"/"};
+	}
 }
