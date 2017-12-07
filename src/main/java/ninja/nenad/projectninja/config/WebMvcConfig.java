@@ -4,14 +4,19 @@ import java.util.List;
 import java.util.Locale;
 
 import org.apache.tomcat.jdbc.pool.DataSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.core.env.Environment;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.ui.context.support.ResourceBundleThemeSource;
 import org.springframework.validation.MessageCodesResolver;
 import org.springframework.validation.Validator;
@@ -45,44 +50,58 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 @PropertySource("classpath:properties/ninjaConnection.properties")
 @EnableWebMvc
 public class WebMvcConfig implements WebMvcConfigurer {
-	
-//	@Autowired
-//    private Environment env;
-	
-//	@Bean
-//    public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
-//        return new PropertySourcesPlaceholderConfigurer();
-//    }
-	
-//	@Bean
-//    public JdbcTemplate jdbcTemplate() {
-//        return new JdbcTemplate(dataSource());
-//    }
+	@Value("${jdbc.driverClassName}")
+	private String DB_DRIVER;
+	@Value("${jdbc.url}")
+	private String DB_URL;
+	@Value("${jdbc.username}")
+	private String DB_USERNAME;
+	@Value("${jdbc.password}")
+	private String DB_PASSWORD;
+
+	@Autowired
+	private Environment env;
+
+	// @Bean
+	// public static PropertySourcesPlaceholderConfigurer
+	// propertySourcesPlaceholderConfigurer() {
+	// return new PropertySourcesPlaceholderConfigurer();
+	// }
+
+	@Bean
+	public JdbcTemplate jdbcTemplate() {
+		return new JdbcTemplate(dataSource());
+	}
 
 	// DataSource
 	@Bean
 	public DataSource dataSource() {
 		DataSource ds = new DataSource();
-		ds.setUsername("${jdbc.username}");
-		ds.setPassword("${jdbc.password}");
-		ds.setDriverClassName("${jdbc.driverClassName}");
-		ds.setUrl("${jdbc.url}");
-		
-		
-//		ds.setUsername(env.getProperty("jdbc.username"));
-//		ds.setPassword(env.getProperty("jdbc.password"));
-//		ds.setDriverClassName(env.getProperty("jdbc.driverClassName"));
-//		ds.setUrl(env.getProperty("jdbc.url"));
+		ds.setUsername(DB_USERNAME);
+		ds.setPassword(DB_PASSWORD);
+		ds.setDriverClassName(DB_DRIVER);
+		ds.setUrl(DB_URL);
+
+		// ds.setUsername(env.getProperty("jdbc.username"));
+		// ds.setPassword(env.getProperty("jdbc.password"));
+		// ds.setDriverClassName(env.getProperty("jdbc.driverClassName"));
+		// ds.setUrl(env.getProperty("jdbc.url"));
+
 		return ds;
 	}
-	
-//	@Bean
-//	public NinjaDao getNinjaDao() {
-//		NinjaDao ninja = new NinjaDaoImpl();
-//		ninja.setDataSource(dataSource());
-//		
-//		return ninja;
-//	}
+
+	@Bean
+	public static PropertySourcesPlaceholderConfigurer placeHolderConfigurer() {
+		return new PropertySourcesPlaceholderConfigurer();
+	}
+
+	// @Bean
+	// public NinjaDao getNinjaDao() {
+	// NinjaDao ninja = new NinjaDaoImpl();
+	// ninja.setDataSource(dataSource());
+	//
+	// return ninja;
+	// }
 
 	@Bean
 	public MessageSource messageSource() {
@@ -133,7 +152,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Bean
 	public UrlBasedViewResolver urlBasedViewResolver() {
 		UrlBasedViewResolver resolver = new UrlBasedViewResolver();
-		resolver.setPrefix("/WEB-INF/views/");
+		resolver.setPrefix("/WEB-INF/views/pages/");
 		resolver.setSuffix(".jsp");
 		resolver.setViewClass(JstlView.class);
 		// resolver.setViewClass(TilesView.class);
@@ -178,7 +197,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		registry.addResourceHandler("/static/**").addResourceLocations("/static/");
 	}
 
-	// Theme support start	
+	// Theme support start
 	@Bean
 	public ResourceBundleThemeSource themeSource() {
 		ResourceBundleThemeSource themeSource = new ResourceBundleThemeSource();
@@ -198,7 +217,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	public CookieThemeResolver themeResolver() {
 		CookieThemeResolver resolver = new CookieThemeResolver();
 		resolver.setCookieMaxAge(2400);
-    	resolver.setCookieName("mythemecookie");
+		resolver.setCookieName("mythemecookie");
 		resolver.setDefaultThemeName("rebelGalaxy");
 		// resolver.setCookieName("my-theme-cookie");
 		return resolver;

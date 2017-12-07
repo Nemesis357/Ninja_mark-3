@@ -14,36 +14,29 @@ import ninja.nenad.projectninja.domain.NinjaDatabase;
 @RequestMapping("/")
 public class MainController {
 
-	@RequestMapping(value = {"/"}, method = RequestMethod.GET)
+	@RequestMapping(value = { "/" }, method = RequestMethod.GET)
 	public String homeCtrl(Locale locale, Model model) {
 		return "redirect:/home";
 	}
-	
-	@RequestMapping(value = { "/home"}, method = RequestMethod.GET)
+
+	@RequestMapping(value = { "/home" }, method = RequestMethod.GET)
 	public String homeNewCtrl(Locale locale, Model model) {
 		return "home";
 	}
-	
 
-
-	@RequestMapping(value = { "/about"}, method = RequestMethod.GET)
+	@RequestMapping(value = { "/about" }, method = RequestMethod.GET)
 	public String aboutCtrl() {
 		return "about";
 	}
-	
-	@RequestMapping(value = { "/contact"}, method = RequestMethod.GET)
-	public String contactCtrl() {
-		return "contact";
+
+//	@RequestMapping(value = { "/contact" }, method = RequestMethod.GET)
+//	public String contactCtrl() {
+//		return "contact";
+//	}
+
+	// Form
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	public ModelAndView contactCtrl() {
+		return new ModelAndView("contact", "command", new NinjaDatabase());
 	}
-	
-//	@RequestMapping("/contacts")
-//	public ModelAndView showContacts() {
-//
-//		return new ModelAndView("ninjaDb", "command", new NinjaDatabase());
-//	}
-	
-//	@RequestMapping("layout")
-//	public String layoutCtrl() {
-//		return "layout";
-//	}
 }
