@@ -4,6 +4,7 @@
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags"%>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,26 +25,45 @@
 			<h2>
 				<s:message code="ninja.contactMe" text="English" />
 			</h2>
-			<form action="">
+			<%-- 			<form action="/project-ninja/submit" method="POST"> --%>
+			<form:form method="POST" action="/project-ninja/submit">
 				<div class="formField">
-					<label><s:message code="ninja.name" text="Name" /></label> <input type="text">
+					<form:label path="name">
+						<s:message code="ninja.name" text="Name" />
+					</form:label>
+					<form:input path="name" type="text" />
 				</div>
 				<div class="formField">
-					<label><s:message code="ninja.company" text="Company" /></label> <input type="text">
+					<form:label path="company">
+						<s:message code="ninja.company" text="Company" />
+					</form:label>
+					<form:input path="company" type="text" />
 				</div>
 				<div class="formField">
-					<label><s:message code="ninja.email" text="Email" /></label> <input type="email">
+					<form:label path="email">
+						<s:message code="ninja.email" text="Email" />
+					</form:label>
+					<form:input path="email" type="email" />
 				</div>
 				<div class="formField">
-					<label for="message"><s:message code="ninja.message" text="Message" /></label>
-					<textarea></textarea>
+					<form:label path="message" for="message">
+						<s:message code="ninja.message" text="Message" />
+					</form:label>
+					<form:textarea path="message"></form:textarea>
 				</div>
 				<div class="formField">
-					<button id="submit" class="submit" type="button" ><s:message code="ninja.submit" text="Submit" /></button>
+					<button id="submit" class="submit" type="submit">
+						<s:message code="ninja.submit" text="Submit" />
+					</button>
+					<input  type="submit" value="SEND" />
 				</div>
-			</form>
+			</form:form>
 		</div>
 	</div>
+<%-- 	<div>Name: ${name}'</div> --%>
+<%-- 	<div>Company: ${company}</div> --%>
+<%-- 	<div>Email: ${email}</div> --%>
+<%-- 	<div>Message: ${message}</div> --%>
 	<script type="text/javascript"
 		src="<c:url value='/static/default/js/lib/jquery-3.2.1.min.js' />"></script>
 	<script type="text/javascript"

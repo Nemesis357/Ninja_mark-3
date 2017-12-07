@@ -16,9 +16,6 @@ public class NinjaDaoImpl implements NinjaDao {
 
 	private JdbcTemplate jdbcTemplate;
 	
-//	@Autowired
-//	private DataSource dataSource;
-	
 	@Autowired
 	@Override
 	public void setDataSource(DataSource ds) {
