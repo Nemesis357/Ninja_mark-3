@@ -26,41 +26,47 @@
 				<s:message code="ninja.contactMe" text="English" />
 			</h2>
 			<%-- 			<form action="/project-ninja/submit" method="POST"> --%>
-			<form:form method="POST" action="/project-ninja/submit">
+			<form:form method="POST" action="/project-ninja/submit" id="submitForm">
 				<div class="formField">
 					<form:label path="name">
 						<s:message code="ninja.name" text="Name" />
 					</form:label>
+					<span class="input-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
 					<form:input path="name" type="text" />
 				</div>
 				<div class="formField">
 					<form:label path="company">
 						<s:message code="ninja.company" text="Company" />
 					</form:label>
+					<span class="input-icon"><i class="fa fa-building-o" aria-hidden="true"></i></span>
 					<form:input path="company" type="text" />
 				</div>
 				<div class="formField">
 					<form:label path="email">
 						<s:message code="ninja.email" text="Email" />
 					</form:label>
+					<span class="input-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
 					<form:input path="email" type="email" />
 				</div>
 				<div class="formField">
 					<form:label path="message" for="message">
-						<s:message code="ninja.message" text="Message" />
+						<s:message code="ninja.message" text="Message" />...
 					</form:label>
 					<form:textarea path="message"></form:textarea>
 				</div>
 				<div class="formField">
-					<button id="submit" class="submit" type="submit">
+					<button id="submit" class="submit formButton" type="submit">
 						<s:message code="ninja.submit" text="Submit" />
 					</button>
-					<input  type="submit" value="SEND" />
+					
+					<button id="listMessages" class="formButton">
+						<s:message code="ninja.listMessages" text="List Messages" />
+					</button>					
 				</div>
 			</form:form>
 		</div>
 	</div>
-<%-- 	<div>Name: ${name}'</div> --%>
+<%-- 	<div>Name: ${name}</div> --%>
 <%-- 	<div>Company: ${company}</div> --%>
 <%-- 	<div>Email: ${email}</div> --%>
 <%-- 	<div>Message: ${message}</div> --%>
