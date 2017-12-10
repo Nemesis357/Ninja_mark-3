@@ -1,4 +1,9 @@
 $(document).ready(function() {
+	var token = $("meta[name='_csrf']").attr("content");
+	    var header = $("meta[name='_csrf_header']").attr("content");
+	$(document).ajaxSend(function(e, xhr, options) {
+	    xhr.setRequestHeader(header, token);
+	  });
 	
 	$(document).on('click', '#submit' ,function(e){
 //		self.className = 'loading';
@@ -13,6 +18,13 @@ $(document).ready(function() {
 	    var readyData = JSON.stringify({"name" : data[0].value, "company" : data[1].value, "email" : data[2].value, "message" : data[3].value});
 	    
 	    
+//	    $(function () {
+//	    	 
+//	    	  $(document).ajaxSend(function(e, xhr, options) {
+//	    	    xhr.setRequestHeader(header, token);
+//	    	  });
+//	    	});
+//	    
 //	    JSON.stringify({"vocabularyName" : "a",
 //	        "vocabularyDescription" : "b"}),
 //	    data[i].action[0].href;
@@ -21,7 +33,7 @@ $(document).ready(function() {
 //	    console.log(data[2].value);
 //	    console.log(data[3].value);
 	    
-	    console.log(readyData);
+	    console.log("Request data: " + readyData);
 	    
 	    $.ajax({
 	    	headers: { 
