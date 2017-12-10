@@ -14,6 +14,7 @@ import ninja.nenad.projectninja.domain.NinjaDatabase;
 @RequestMapping("/")
 public class MainController {
 
+	
 	@RequestMapping(value = { "/" }, method = RequestMethod.GET)
 	public String homeCtrl(Locale locale, Model model) {
 		return "redirect:/home";

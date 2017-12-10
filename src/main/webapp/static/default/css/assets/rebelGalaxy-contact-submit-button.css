@@ -4,7 +4,7 @@
     transform: scale(1, 1);
   }
   40% {
-    border-color: #5585ff;
+    border-color: #133fd6;
     background-color: transparent;
     transform: scale(1, 1);
   }
@@ -14,8 +14,8 @@
     width: 2.5rem;
     text-indent: -0.6125rem;
     color: transparent;
-    border-color: #5585ff;
-    background-color: #5585ff;
+    border-color: #13a2d6;
+    background-color: transparent;
   }
   80% {
     transform: scale(1, 1);
@@ -23,8 +23,8 @@
   100% {
     margin-left: 1.25rem;
     width: 2.5rem;
-    background-color: #5585ff;
-    border-color: #5585ff;
+    background-color: transparent;
+    border-color: #18d613;
     color: transparent;
   }
 }
@@ -46,16 +46,16 @@
     transform: scale(0.75, 0.75);
   }
   15% {
-    transform: scale(0.85, 0.85);
+    transform: scale(0.95, 0.75);
   }
   45% {
-    transform: scale(0.75, 0.75);
+    transform: scale(0.85, 0.65);
   }
   55% {
-    transform: scale(0.95, 0.95);
+    transform: scale(0.105, 0.85);
   }
   85% {
-    transform: scale(0.75, 0.75);
+    transform: scale(0.85, 0.105);
   }
   100% {
     opacity: 1;
@@ -68,25 +68,35 @@
     width: 2.5rem;
   }
   10% {
-    background-color: #5585ff;
-    border-color: #5585ff;
+    background-color: #18d613;
+    border-color: #18d613;
   }
   70% {
     margin: 0;
     width: 7.25rem;
-    background-color: #fff;
+    background-color: #18d61369;
     transform: scale(1.1, 1.1);
   }
   100% {
     margin: 0;
     width: 7rem;
     border-color: #8cce1e;
-    background-color: #fff;
+    background-color: transparent;
   }
 }
 @keyframes button-dot-outro {
   0% {
     opacity: 1;
+    transform: scale(1.2, 0.8);
+  }
+  25% {
+    transform: scale(0.8, 1.2);
+  }
+  50% {
+    transform: scale(1.2, 0.8);
+  }
+  75% {
+    transform: scale(0.8, 1.2);
   }
   100% {
     opacity: 0;
@@ -177,6 +187,6 @@
   animation: button-ready-label .5s forwards .275s;
 }
 #submit.ready:after {
-  opacity: 1;
-  animation: button-dot-outro .333s;
+  opacity: 0;
+  animation: button-dot-outro 0.5s;
 }

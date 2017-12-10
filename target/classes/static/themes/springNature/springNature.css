@@ -74,12 +74,16 @@ body {
     border-bottom: 1px solid #8d7f6b;
 }
 
-#formWindow label {
+#formWindow label, #formWindow i, #formWindow input, #formWindow textarea {
 	color: #847561;
     text-shadow: 1px 1px #8d7f6b;
 }
 
-
+.label-move{
+	top: 0 !important;
+	left: 5px !important;
+	font-size: 15px !important;
+}
 
 
 
