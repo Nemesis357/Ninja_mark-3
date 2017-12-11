@@ -8,6 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link href="<c:url value='/static/default/css/contact.css' />"	rel="stylesheet"></link>
 <link href="<s:theme code='submitButton'/>" rel="stylesheet">
 <%-- <link rel="stylesheet" href="<s:theme code='stylesheet'/>" type="text/css" /> --%>
 </head>
@@ -15,7 +16,8 @@
 	<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
 	<div id="bodyBackground">
-		<div></div>
+		<s:theme code='contactBackground'/>
+		<div class="overlay"></div>
 	</div>
 
 	<div id="formWindow">
@@ -55,9 +57,10 @@
 				<div class="formField">
 					<button id="submit" class="submit formButton" type="submit">
 						<s:message code="ninja.submit" text="Submit" />
+<!-- 						<i class="fa fa-check" aria-hidden="true"></i> -->
 					</button>
 					
-					<button id="listMessages" class="formButton">
+					<button id="listMessages" class="loadMes formButton">
 						<s:message code="ninja.listMessages" text="List Messages" />
 					</button>					
 				</div>
