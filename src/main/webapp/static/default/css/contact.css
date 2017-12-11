@@ -6,16 +6,13 @@
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-}
-#bodyBackground div {
-  width: 100%;
-  height: -webkit-fill-available;
+  overflow-x: hidden;
 }
 
 #formWindow .formContainer form {
   text-align: center;
   overflow: hidden;
-  padding: 5px;
+  padding: 10px;
 }
 #formWindow .formContainer .formField {
   margin-bottom: 15px;
@@ -70,4 +67,8 @@
   top: 0;
   left: 200px;
   background-color: #9a2020;
+}
+
+.formButton i {
+  display: none;
 }
