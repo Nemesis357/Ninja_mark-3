@@ -26,7 +26,7 @@
 				<s:message code="ninja.contactMe" text="Contact me" />
 			</h2>
 			<%-- 			<form action="/project-ninja/submit" method="POST"> --%>
-			<form:form method="POST" action="/project-ninja/submit" id="submitForm">
+			<form:form method="POST" onsubmit="return false" id="submitForm">
 				<div class="formField">
 					<form:label path="name">
 						<s:message code="ninja.name" text="Name" />
@@ -55,7 +55,7 @@
 					<form:textarea path="message"></form:textarea>
 				</div>
 				<div class="formField">
-					<button id="submit" class="submit formButton" type="submit">
+					<button id="submit" class="submit formButton">
 						<s:message code="ninja.submit" text="Submit" />
 <!-- 						<i class="fa fa-check" aria-hidden="true"></i> -->
 					</button>
