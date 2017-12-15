@@ -27,7 +27,7 @@
 			</h2>
 			<%-- 			<form action="/project-ninja/submit" method="POST"> --%>
 			<form:form method="POST" onsubmit="return false" id="submitForm">
-				<div class="formField">
+				<div class="formField formName">
 					<form:label path="name">
 						<s:message code="ninja.name" text="Name" />
 					</form:label>
@@ -41,21 +41,21 @@
 					<span class="input-icon"><i class="fa fa-building-o" aria-hidden="true"></i></span>
 					<form:input path="company" type="text" />
 				</div>
-				<div class="formField">
+				<div class="formField formEmail">
 					<form:label path="email">
 						<s:message code="ninja.email" text="Email" />
 					</form:label>
 					<span class="input-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
 					<form:input path="email" type="email" />
 				</div>
-				<div class="formField">
+				<div class="formField formMessage">
 					<form:label path="message" for="message">
 						<s:message code="ninja.message" text="Message" />...
 					</form:label>
 					<form:textarea path="message"></form:textarea>
 				</div>
-				<div class="formField">
-					<button id="submit" class="submit formButton">
+				<div class="formField formBtnGroup">
+					<button id="submit" class="submit formButton submitDisable">
 						<s:message code="ninja.submit" text="Submit" />
 <!-- 						<i class="fa fa-check" aria-hidden="true"></i> -->
 					</button>
@@ -86,8 +86,8 @@
 
 
 
-	<script type="text/javascript"
-		src="<c:url value='/static/default/js/lib/jquery-3.2.1.min.js' />"></script>
+<%-- 	<script type="text/javascript" --%>
+<%-- 		src="<c:url value='/static/default/js/lib/jquery-3.2.1.min.js' />"></script> --%>
 	<script type="text/javascript"
 		src="<c:url value='/static/default/js/lib/submitButton.js' />"></script>
 </body>

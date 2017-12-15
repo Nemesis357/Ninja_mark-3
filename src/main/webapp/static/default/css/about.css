@@ -1,0 +1,165 @@
+.aboutContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aboutContainerFlex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  color: #ececec;
+}
+.aboutContainerFlex .about_section_1 img {
+  width: 400px;
+}
+.aboutContainerFlex .about_section_2 {
+  flex: 1;
+  padding: 170px 20px 0;
+}
+.aboutContainerFlex .about_section_2 p {
+  font-size: 17px;
+  padding: 3px 0 3px 0;
+}
+.aboutContainerFlex .about_section_2 p i {
+  margin-right: 8px;
+  color: #00ff2d;
+}
+.aboutContainerFlex [class^="sec2_box"] {
+  padding-bottom: 20px;
+}
+.aboutContainerFlex .aboutHeading {
+  font-size: 30px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  text-transform: uppercase;
+}
+.aboutContainerFlex .aboutHeading:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  height: 5px;
+  background-color: #ececec;
+  border-radius: 50px;
+  animation: border-bottom-anim 8s infinite;
+}
+
+section.data {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 30px 0;
+  margin: 0 0 40px 0;
+}
+section.data div.measure {
+  position: absolute;
+  height: 100%;
+  border-right: 2px dashed #888;
+  margin: 0 0 35px 0;
+}
+section.data div.measure:after {
+  content: "Measure " attr(data-percentage) "%";
+  position: absolute;
+  bottom: 0px;
+  right: -3px;
+  background-color: #888;
+  color: #FFF;
+  padding: 4px 16px 4px 8px;
+}
+
+div.bar-wrap {
+  width: 100%;
+  display: block;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+}
+div.bar-wrap label {
+  font-size: 0.8em;
+  color: #8a8a8a;
+  text-transform: uppercase;
+  margin: 0 0 2px 0;
+  display: block;
+}
+div.bar-wrap div.bar {
+  height: 40px;
+  width: 0;
+  position: relative;
+}
+div.bar-wrap div.bar:after {
+  content: attr(data-percentage) "%";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  padding: 10px;
+}
+div.bar-wrap div.bar.blue {
+  background-color: #61a7c4;
+  border-bottom: 3px solid #4290b0;
+}
+div.bar-wrap div.bar.blue:after {
+  color: #FFF;
+}
+div.bar-wrap div.bar.green {
+  background-color: #61c471;
+  border-bottom: 3px solid #42b054;
+}
+div.bar-wrap div.bar.green:after {
+  color: #FFF;
+}
+div.bar-wrap div.bar.red {
+  background-color: #c46161;
+  border-bottom: 3px solid #b04242;
+}
+div.bar-wrap div.bar.red:after {
+  color: #FFF;
+}
+div.bar-wrap div.bar.purple {
+  background-color: #a461c4;
+  border-bottom: 3px solid #8d42b0;
+}
+div.bar-wrap div.bar.purple:after {
+  color: #FFF;
+}
+div.bar-wrap div.bar.yellow {
+  background-color: #d1d219;
+  border-bottom: 3px solid #a4a414;
+}
+div.bar-wrap div.bar.yellow:after {
+  color: #FFF;
+}
+
+@-webkit-keyframes border-bottom-anim {
+  0% {
+    right: 80%;
+    left: 0%;
+    background-color: #2ad013;
+  }
+
+  25% {
+    right: 0;
+    background-color: #ab1f1f;
+  }
+
+  50% {
+    right: 0;
+    left: 80%;
+    background-color: #cfd013;
+  }
+
+  75% {
+    left: 0;
+    background-color: #e74c3c;
+  }
+
+  100% {
+    right: 80%;
+    background-color: #2ad013;
+  }
+}

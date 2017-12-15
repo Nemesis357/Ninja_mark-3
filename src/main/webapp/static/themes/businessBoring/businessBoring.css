@@ -35,7 +35,7 @@ body {
 /* --- Contact page --- */
 
 #bodyBackground {
-	background-image: url("../../themes/businessBoring/desk_1.jpg");
+	background-image: url("../../themes/businessBoring/desk_3.jpg");
 }
 
 #bodyBackground div {
@@ -48,33 +48,49 @@ body {
 
 #formWindow .formContainer {
 	position: absolute;
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
+	top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
     min-width: 450px;
+    background: url("tablet_3.png") no-repeat top left;
+    background-size: 100% 100%;
+    padding: 67px 35px 69px 36px;
+    color: #6386ac;
 }
 
 #formWindow .formContainer h2 {
     text-align: center;
-    margin-bottom: 10px;
-    font-size: 40px;
+/*     margin-bottom: 10px; */
+    padding: 10px 0 0 0;
+    font-size: 30px;
     font-style: italic;
-    color: #75732f;
+/*     color: #75732f; */
 }
 
-#formWindow input:not([type=submit]), textarea {
+#formWindow .formContainer .formField input:not([type=submit]), textarea {
 	background-color: #ffffff00;
-    border-bottom: 1px solid #75732f;
+    border-bottom: 1px solid #6386ac;
+    color: #cacaca;
+    font-size: 15px;
 }
 
 #formWindow label, #formWindow i, #formWindow input, #formWindow textarea {
-	color: #75732f;
+/* 	color: #75732f; */
 }
 
 .label-move{
 	top: 0 !important;
 	left: 5px !important;
 	font-size: 15px !important;
+}
+
+.errorVal {
+/* 	box-shadow: 0 0 12px 5px #e50707; */
+/*     border-radius: 7px; */
+	border-right: 1px dashed #e50707;
+    border-left: 1px dashed #e50707;
+    border-radius: 7px;
+    color: #e50707;
 }
 
 	
