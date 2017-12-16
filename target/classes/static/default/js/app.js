@@ -55,11 +55,20 @@ $(document).ready(function() {
 	
 	
 	
-	
+	//Random color on hover (About page)
+    $(".logo-img").on({
+        mouseenter: function () {
+        	var randColor = Math.floor(Math.random()*16777215).toString(16);
+        	$(this).css("background-color", "#" + randColor);
+        },
+        mouseleave: function () {
+        	$(this).css("background-color", "initial");
+        }
+    });
 	
 	
 	
 	
 		    
-
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
 });

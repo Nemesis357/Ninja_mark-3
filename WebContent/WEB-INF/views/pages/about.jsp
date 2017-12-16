@@ -62,30 +62,68 @@
 				<section class="data">
 					<div class="bar-wrap">
 						<label>Photoshop</label>
-						<div class="bar blue" data-percentage="82"></div>
+						<div class="bar blue" data-percentage="82"><span></span></div>
 					</div>
 					<div class="bar-wrap">
 						<label>HTML 5</label>
-						<div class="bar green" data-percentage="76"></div>
+						<div class="bar green" data-percentage="76"><span></span></div>
 					</div>
 					<div class="bar-wrap">
 						<label>CSS 3</label>
-						<div class="bar red" data-percentage="78"></div>
+						<div class="bar red" data-percentage="78"><span></span></div>
 					</div>
 					<div class="bar-wrap">
 						<label>JavaScript</label>
-						<div class="bar yellow" data-percentage="55"></div>
+						<div class="bar yellow" data-percentage="55"><span></span></div>
 					</div>
 					<div class="bar-wrap">
 						<label>Java</label>
-						<div class="bar purple" data-percentage="43"></div>
+						<div class="bar purple" data-percentage="43"><span></span></div>
 					</div>
 				</section>
 
 			</div>
 		</div>
 	</div>
-	
+
+	<div class="aboutContainer aboutContainerFlex aboutContainerInfo">
+		<div class="info-box-1">
+			<div class="info-skills">
+				<div class="logo-img logo-spring">
+					<img src="<c:url value='/static/default/img/logo/spring-1.png' />" />
+				</div>
+				<div class="logo-img logo-jquery">
+					<img src="<c:url value='/static/default/img/logo/jquery-1.png' />" />
+				</div>
+				<div class="logo-img logo-sass">
+					<img src="<c:url value='/static/default/img/logo/sass-1.png' />" />
+				</div>
+				<div class="logo-img logo-bootstrap">
+					<img src="<c:url value='/static/default/img/logo/bootstrap-1.png' />" />
+				</div>
+			</div>
+			<div class="info-tools">
+				<div class="logo-img logo-eclipse">
+					<img src="<c:url value='/static/default/img/logo/eclipse.jpg' />" />
+				</div>
+				<div class="logo-img logo-intellij">
+					<img src="<c:url value='/static/default/img/logo/intellij.png' />" />
+				</div>
+				<div class="logo-img logo-atom">
+					<img src="<c:url value='/static/default/img/logo/atom.png' />" />
+				</div>
+				<div class="logo-img logo-brackets">
+					<img src="<c:url value='/static/default/img/logo/brackets.png' />" />
+				</div>
+			</div>
+		</div>
+		<div class="info-box-2">
+			<a href="<c:url value='/downloadPDF' />"><div id="downloadPDF" class="download">
+				<div class="downloadText"> <span><i class="fa fa-cloud-download" aria-hidden="true"></i>Download</span> </div>
+				<div class="downloadImg"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
+			</div></a>
+		</div>
+	</div>
 	
 	<div class="aboutContainerFlex aboutContainerSocial">
 		<div class="facebook nav-elem"><i class="fa fa-facebook" aria-hidden="true"></i></div>
@@ -96,7 +134,7 @@
 		<div class="animation start-home"></div>
 	</div>
 
-<script type="text/javascript"
+	<script type="text/javascript"
 		src="<c:url value='/static/default/js/lib/data.js' />"></script>
 </body>
 </html>

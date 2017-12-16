@@ -23,21 +23,21 @@ $(document).ready(function(){
     if(percentage > 100){
       percentage = 100;
     }
-    $(bar).animate({'width': percentage + '%'}, 'slow');
+    $(bar).animate({'width': percentage + '%'}, 2500);
   }
   
-  function randomiseBar(bar) {
-    var width =  Math.floor(Math.random() * (100 - 20 + 1)) + 20;
-    $(bar).animate({'width': width + '%'}, 'slow');
-    $(bar).attr('data-percentage', width);
-  }
+//  function randomiseBar(bar) {
+//    var width =  Math.floor(Math.random() * (100 - 20 + 1)) + 20;
+//    $(bar).animate({'width': width + '%'}, 'slow');
+//    $(bar).attr('data-percentage', width);
+//  }
   
   function drawMeasure(measure) {
     var percentage = $(measure).data('percentage');
     if(percentage > 100){
       percentage = 100;
     }
-    $(measure).animate({'width': percentage + '%'}, 2500);
+    $(measure).animate({'width': percentage + '%'}, 5000);
   }
   
 //  function randomiseMeasure(measure) {
