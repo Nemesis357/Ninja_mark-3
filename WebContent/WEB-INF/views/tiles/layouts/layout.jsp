@@ -21,6 +21,9 @@
 <link
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
 	rel="stylesheet">
+	
+	<script type="text/javascript"
+		src="<c:url value='/static/default/js/lib/jquery-3.2.1.min.js' />"></script>
 </head>
 <body>
 	<div id="settingsMenu">

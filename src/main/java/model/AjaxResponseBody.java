@@ -7,6 +7,9 @@ import jsonview.Views;
 public class AjaxResponseBody {
 
 	@JsonView(Views.Public.class)
+	int id;
+
+	@JsonView(Views.Public.class)
 	String name;
 	
 	@JsonView(Views.Public.class)
@@ -17,6 +20,24 @@ public class AjaxResponseBody {
 	
 	@JsonView(Views.Public.class)
 	String message;
+
+	public AjaxResponseBody(int id, String name, String company, String email, String message) {
+		this.id = id;
+		this.name = name;
+		this.company = company;
+		this.email = email;
+		this.message = message;
+	}
+	
+	public AjaxResponseBody() {};
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;

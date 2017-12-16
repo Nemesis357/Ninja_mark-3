@@ -54,19 +54,23 @@ body {
 
 #formWindow .formContainer {
 	position: absolute;
-    right: 20%;
-    min-width: 450px;
     top: 50%;
+    right: 5%;
     transform: translateY(-50%);
+    min-width: 570px;
+    background: url(scroll.png) no-repeat top left;
+    background-size: 100% 100%;
+    padding: 106px 50px 119px 50px;
+    color: #0c0f23;
 }
 
 #formWindow .formContainer h2 {
     text-align: center;
-    margin-bottom: 10px;
-    font-size: 40px;
+    padding-top: 10px;
+    font-size: 30px;
     font-style: italic;
-    color: #847561;
-    text-shadow: 1px 1px #8d7f6b;
+/*     color: #847561; */
+/*     text-shadow: 1px 1px #8d7f6b; */
 }
 
 #formWindow input:not([type=submit]), textarea {
@@ -75,8 +79,8 @@ body {
 }
 
 #formWindow label, #formWindow i, #formWindow input, #formWindow textarea {
-	color: #847561;
-    text-shadow: 1px 1px #8d7f6b;
+/* 	color: #847561; */
+/*     text-shadow: 1px 1px #8d7f6b; */
 }
 
 .label-move{
@@ -84,6 +88,17 @@ body {
 	left: 5px !important;
 	font-size: 15px !important;
 }
+
+.errorVal {
+/* 	box-shadow: 0 0 12px 5px #e50707; */
+/*     border-radius: 7px; */
+	border-right: 1px dashed #e50707;
+    border-left: 1px dashed #e50707;
+    border-radius: 7px;
+    color: #e50707;
+}
+
+
 
 
 

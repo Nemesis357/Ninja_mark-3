@@ -1,6 +1,8 @@
 package ninja.nenad.projectninja.controller;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,107 +25,15 @@ public class DatabaseController {
 	@Autowired
 	private DataSource dataSource;
 
-//	 @RequestMapping(value = "/submit", method = RequestMethod.POST)
-//	 public String addNinja(@ModelAttribute("ninja") NinjaDatabase ninja,
-//	 ModelMap model) {
-//		 model.addAttribute("name", ninja.getName());
-//		 model.addAttribute("company", ninja.getCompany());
-//		 model.addAttribute("email", ninja.getEmail());
-//		 model.addAttribute("message", ninja.getMessage());
-//		 model.addAttribute("id", ninja.getId());
-//		
-//		 
-//		 System.out.println("Ninja name: " + ninja.getName());
-//		
-//		 NinjaDao ninjaConn = new NinjaDaoImpl();
-//		
-//		 try {
-//		
-//			 System.out.println("Ninja Company: " + ninja.getCompany());
-//			 ninjaConn.setDataSource(dataSource);
-//			 boolean ninjaBool = ninjaConn.create(ninja);
-//			
-//			 System.out.println("Insert complete: " + ninjaBool);
-//			
-//			 return "home";
-//		 } catch(Exception e) {
-//			// e.printStackTrace();
-//			 System.out.println("Submit failed!!!");
-//		 }
-//		
-//		 return "result";
-//	 }
-
-	// @RequestMapping(value = "/submit", method =
-	// RequestMethod.POST,consumes=MediaType.APPLICATION_JSON_VALUE, produces =
-	// MediaType.APPLICATION_JSON_VALUE)
-	// public @ResponseBody
-	// NinjaDatabase getTime(@RequestBody NinjaDatabase ninja) {
-	//
-	//
-	// System.out.println(new Date().toString() + " Ninja object: " + ninja);
-	//
-	// String result = "Success";
-	// //String result = "editUserRequest";
-	// //System.out.println("Debug Message from CrunchifySpringAjaxJQuery
-	// Controller.." + new Date().toString());
-	// return ninja;
-	// }
-
-//	@PostMapping(value = "/submit", produces = { MediaType.APPLICATION_JSON_VALUE })
-//	@ResponseBody
-//	public NinjaDatabase saveEmployee(@ModelAttribute NinjaDatabase ninja, BindingResult result) {
-//
-//		NinjaDatabase ninjaObj = new NinjaDatabase();
-//
-//		System.out.println(new Date().toString());
-//		System.out.println("Ninja Object name: " + ninjaObj.getName());
-//		System.out.println("Ninja name: " + ninja.getName());
-//
-//		// if(result.hasErrors()){
-//		//
-//		// //Get error message
-//		// Map<String, String> errors = result.getFieldErrors().stream()
-//		// .collect(
-//		// Collectors.toMap(FieldError::getField, FieldError::getDefaultMessage)
-//		// );
-//		//
-//		// respone.setValidated(false);
-//		// respone.setErrorMessages(errors);
-//		// }else{
-//		// // Implement business logic to save employee into database
-//		// //..
-//		// respone.setValidated(true);
-//		// respone.setEmployee(employee);
-//		// }
-//		return ninjaObj;
-//	}
-
-	// @RequestMapping(value = { "/contact" }, method = RequestMethod.GET)
-	// public String contactCtrl() {
-	// return "contact";
-	// }
-	
-//	@ResponseBody
-//	@RequestMapping(value = "/submit")
-//	public AjaxResponseBody getSearchResultViaAjax(@RequestBody SearchCriteria search) {
-//
-//		AjaxResponseBody result = new AjaxResponseBody();
-//		//logic
-//		return result;
-//
-//	}
 	
 	@JsonView(Views.Public.class)
 	@RequestMapping(value="/submit")
     public @ResponseBody AjaxResponseBody submitCtrl(@RequestBody NinjaDatabase ninjaRequest) {
-		System.out.println(new Date().toString());
-//		System.out.println("Ninja name: " + ninja.getName());
+		System.out.println("Submiting: " + new Date().toString());
 		
 		 NinjaDao ninjaConn = new NinjaDaoImpl();
 		
 		AjaxResponseBody result = new AjaxResponseBody();
-		System.out.println("Ninja request name: " + ninjaRequest.getName());
 		result.setName(ninjaRequest.getName());
 		result.setCompany(ninjaRequest.getCompany());
 		result.setEmail(ninjaRequest.getEmail());
@@ -131,7 +41,6 @@ public class DatabaseController {
 //			
 		 try {
 		
-//			 System.out.println("Ninja Company: " + ninja.getCompany());
 			 ninjaConn.setDataSource(dataSource);
 			 boolean ninjaBool = ninjaConn.create(ninjaRequest);
 			
@@ -145,5 +54,63 @@ public class DatabaseController {
 		
 		return result;
 	}	
-
+	
+	@JsonView(Views.Public.class)
+	@RequestMapping(value="/listMessages")
+    public @ResponseBody List<AjaxResponseBody> listCtrl() {
+		System.out.println("Listing: " + new Date().toString());
+		
+		NinjaDao ninjaConn = new NinjaDaoImpl();
+		List<NinjaDatabase> ninjaList = new ArrayList<NinjaDatabase>();
+		List<AjaxResponseBody> newList = new ArrayList<AjaxResponseBody>();
+		 try {
+		
+			 ninjaConn.setDataSource(dataSource);
+			 
+			 ninjaList = ninjaConn.getAllRecords();
+			
+			 for(NinjaDatabase ninja : ninjaList) {
+				 AjaxResponseBody newNinja = new AjaxResponseBody(ninja.getId(), ninja.getName(), ninja.getCompany(), ninja.getEmail(), ninja.getMessage());
+				 newList.add(newNinja);
+			 }
+			 
+			 return newList;
+		 } catch(Exception e) {
+			// e.printStackTrace();
+			 System.out.println("Submit failed!!!");
+			 return null;
+		 }
+	}
+	
+	
+	@JsonView(Views.Public.class)
+	@RequestMapping(value="/ninjaDelete")
+    public @ResponseBody boolean deleteCtrl(@RequestBody NinjaDatabase ninjaRequest) {
+		System.out.println("Deleting: " + new Date().toString());
+		
+		NinjaDao ninjaConn = new NinjaDaoImpl();
+//		List<NinjaDatabase> ninjaList = new ArrayList<NinjaDatabase>();
+//		List<AjaxResponseBody> newList = new ArrayList<AjaxResponseBody>();
+		 try {
+		
+			 ninjaConn.setDataSource(dataSource);
+			 
+//			 ninjaList = ninjaConn.getAllRecords();
+//			
+			 System.out.println("Ninja id: " + ninjaRequest.getId());
+			 boolean isDeleted = ninjaConn.delete(ninjaRequest);
+			 System.out.println(isDeleted);
+			 
+//			 for(NinjaDatabase ninja : ninjaList) {
+//				 AjaxResponseBody newNinja = new AjaxResponseBody(ninja.getId(), ninja.getName(), ninja.getCompany(), ninja.getEmail(), ninja.getMessage());
+//				 newList.add(newNinja);
+//			 }
+			 
+			 return isDeleted;
+		 } catch(Exception e) {
+			// e.printStackTrace();
+//			 System.out.println("Submit failed!!!");
+			 return false;
+		 }
+	}	
 }

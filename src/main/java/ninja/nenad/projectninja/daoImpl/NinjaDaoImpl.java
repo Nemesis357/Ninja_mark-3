@@ -47,8 +47,11 @@ public class NinjaDaoImpl implements NinjaDao {
 
 	@Override
 	public boolean delete(NinjaDatabase ninja) {
-		// TODO Auto-generated method stub
-		return false;
+		String sqlQuery = "DELETE FROM ninja_table WHERE id = ? ";
+		Object[] params = { ninja.getId() };
+
+		boolean status = jdbcTemplate.update(sqlQuery, params) == 1;
+		return status;
 	}
 
 	@Override
