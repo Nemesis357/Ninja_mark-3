@@ -35,7 +35,7 @@ body {
 /* --- Contact page --- */
 
 #bodyBackground {
-	background-image: url("../../themes/businessBoring/desk_3.jpg");
+	background-image: url("img/desk_3.jpg");
 }
 
 #bodyBackground div {
@@ -52,7 +52,7 @@ body {
     left: 25%;
     transform: translate(-50%, -50%);
     min-width: 450px;
-    background: url("tablet_3.png") no-repeat top left;
+    background: url("img/tablet_3.png") no-repeat top left;
     background-size: 100% 100%;
     padding: 67px 35px 69px 36px;
     color: #6386ac;
@@ -92,5 +92,64 @@ body {
     border-radius: 7px;
     color: #e50707;
 }
+
+
+.aboutContainerInfo {
+	padding: 100px 0;
+}
+
+.wrapperTop {
+	position: relative;
+	background: url("img/businessBG_2.jpg") no-repeat top left;
+	background-size: cover;
+}
+
+.wrapperBody:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#002f4b,#0f5d6b);
+	opacity: .4; 
+}
+
+.wrapperBottom {
+	position: relative;
+	background: url("img/businessBG_4.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+
+.wrapperTop div.bar-wrap label {
+	color: #dcdbdb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	
