@@ -338,14 +338,73 @@ body {
 
 
 
-// About page
+/* About */
+
+.aboutContainerInfo {
+    border-top: 2px solid #00ff2d;
+}
+
+.info-box-1:after {
+	left: 0;
+	animation: left-anim 5s infinite;
+}
+
+.info-box-2:after {
+	right: 0;
+	animation: right-anim 5s infinite;
+}
+
+.aboutContainerSocial {
+	border-radius: 8px 8px 0 0;
+}
+
+.aboutContainerSocial .animation {
+	border-radius: 60px !important;
+}
 
 
 
+@-webkit-keyframes left-anim {
+  0% {
+    width: 0;
+    background-color: #2ad013;
+  }
+  25 {
+  	background-color: #ab1f1f;
+  }
+  50% {
+  	width: 100%;
+    background-color: #cfd013;
+  }
+  75 {
+  	background-color: #e74c3c;
+  }
+  100% {
+  	width: 0;
+    background-color: #2ad013;
+  }
+}
 
-
-
-
+@-webkit-keyframes right-anim {
+  0% {
+    width: 0;
+    background-color: #2ad013;
+  }
+  25 {
+  	background-color: #ab1f1f;
+  }
+  50% {
+    width: 100%;
+    background-color: #cfd013;
+  }
+  75 {
+  	background-color: #e74c3c;
+  }
+  100% {
+  	width: 0;
+    background-color: #2ad013;
+  }
+}
 
 
 

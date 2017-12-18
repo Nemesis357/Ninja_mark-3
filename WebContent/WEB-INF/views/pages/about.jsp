@@ -14,114 +14,119 @@
 <body>
 	<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
-	<div class="aboutContainer aboutContainerFlex">
-		<div class="about_section_1">
-			<%-- 			<img src="<s:theme code='aboutHero'/>" alt="Hero image"> --%>
-			<s:theme code='aboutHero' />
-		</div>
-		<div class="about_section_2">
-			<div class="sec2_box1">
-				<h3 class="aboutHeading">
-					<s:message code="ninja.aboutTitle1"
-						text="Hello, my name is Nenad Nikolic" />
-				</h3>
-				<p>
-					<s:message code="ninja.aboutMe1" text="Little bit about me" />
-				</p>
-			</div>
-			<div class="sec2_box2">
-				<h3 class="aboutHeading">
-					<s:message code="ninja.aboutTitle2" text="Facts about me" />
-				</h3>
-				<p>
-					<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-					<s:message code="ninja.aboutFacts1" text="Little bit about me" />
-				</p>
-				<p>
-					<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-					<s:message code="ninja.aboutFacts2" text="Little bit about me" />
-				</p>
-				<p>
-					<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-					<s:message code="ninja.aboutFacts3" text="Little bit about me" />
-				</p>
-				<p>
-					<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-					<s:message code="ninja.aboutFacts4" text="Little bit about me" />
-				</p>
-				<p>
-					<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-					<s:message code="ninja.aboutFacts5" text="Little bit about me" />
-				</p>
-			</div>
-			<div class="sec2_box1">
-				<h3 class="aboutHeading">
-					<s:message code="ninja.aboutTitle3" text="Skillset" />
-				</h3>
 
-				<section class="data">
-					<div class="bar-wrap">
-						<label>Photoshop</label>
-						<div class="bar blue" data-percentage="82"><span></span></div>
-					</div>
-					<div class="bar-wrap">
-						<label>HTML 5</label>
-						<div class="bar green" data-percentage="76"><span></span></div>
-					</div>
-					<div class="bar-wrap">
-						<label>CSS 3</label>
-						<div class="bar red" data-percentage="78"><span></span></div>
-					</div>
-					<div class="bar-wrap">
-						<label>JavaScript</label>
-						<div class="bar yellow" data-percentage="55"><span></span></div>
-					</div>
-					<div class="bar-wrap">
-						<label>Java</label>
-						<div class="bar purple" data-percentage="43"><span></span></div>
-					</div>
-				</section>
-
+	<div class="wrapperBody wrapperTop">
+		<div class="aboutContainer aboutContainerFlex">
+			<div class="about_section_1">
+				<%-- 			<img src="<s:theme code='aboutHero'/>" alt="Hero image"> --%>
+				<s:theme code='aboutHero' />
+			</div>
+			<div class="about_section_2">
+				<div class="sec2_box1">
+					<h3 class="aboutHeading">
+						<s:message code="ninja.aboutTitle1"
+							text="Hello, my name is Nenad Nikolic" />
+					</h3>
+					<p>
+						<s:message code="ninja.aboutMe1" text="Little bit about me" />
+					</p>
+				</div>
+				<div class="sec2_box2">
+					<h3 class="aboutHeading">
+						<s:message code="ninja.aboutTitle2" text="Facts about me" />
+					</h3>
+					<p>
+						<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+						<s:message code="ninja.aboutFacts1" text="Little bit about me" />
+					</p>
+					<p>
+						<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+						<s:message code="ninja.aboutFacts2" text="Little bit about me" />
+					</p>
+					<p>
+						<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+						<s:message code="ninja.aboutFacts3" text="Little bit about me" />
+					</p>
+					<p>
+						<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+						<s:message code="ninja.aboutFacts4" text="Little bit about me" />
+					</p>
+					<p>
+						<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+						<s:message code="ninja.aboutFacts5" text="Little bit about me" />
+					</p>
+				</div>
+				<div class="sec2_box1">
+					<h3 class="aboutHeading">
+						<s:message code="ninja.aboutTitle3" text="Skillset" />
+					</h3>
+	
+					<section class="data">
+						<div class="bar-wrap">
+							<label>Photoshop</label>
+							<div class="bar blue" data-percentage="82"><span></span></div>
+						</div>
+						<div class="bar-wrap">
+							<label>HTML 5</label>
+							<div class="bar green" data-percentage="76"><span></span></div>
+						</div>
+						<div class="bar-wrap">
+							<label>CSS 3</label>
+							<div class="bar red" data-percentage="78"><span></span></div>
+						</div>
+						<div class="bar-wrap">
+							<label>JavaScript</label>
+							<div class="bar yellow" data-percentage="55"><span></span></div>
+						</div>
+						<div class="bar-wrap">
+							<label>Java</label>
+							<div class="bar purple" data-percentage="43"><span></span></div>
+						</div>
+					</section>
+	
+				</div>
 			</div>
 		</div>
 	</div>
-
-	<div class="aboutContainer aboutContainerFlex aboutContainerInfo">
-		<div class="info-box-1">
-			<div class="info-skills">
-				<div class="logo-img logo-spring">
-					<img src="<c:url value='/static/default/img/logo/spring-1.png' />" />
+	
+	<div class="wrapperBody wrapperBottom">
+		<div class="aboutContainer aboutContainerFlex aboutContainerInfo">
+			<div class="info-box-1">
+				<div class="info-skills">
+					<div class="logo-img logo-spring">
+						<img src="<c:url value='/static/default/img/logo/spring-1.png' />" />
+					</div>
+					<div class="logo-img logo-jquery">
+						<img src="<c:url value='/static/default/img/logo/jquery-1.png' />" />
+					</div>
+					<div class="logo-img logo-sass">
+						<img src="<c:url value='/static/default/img/logo/sass-1.png' />" />
+					</div>
+					<div class="logo-img logo-bootstrap">
+						<img src="<c:url value='/static/default/img/logo/bootstrap-1.png' />" />
+					</div>
 				</div>
-				<div class="logo-img logo-jquery">
-					<img src="<c:url value='/static/default/img/logo/jquery-1.png' />" />
-				</div>
-				<div class="logo-img logo-sass">
-					<img src="<c:url value='/static/default/img/logo/sass-1.png' />" />
-				</div>
-				<div class="logo-img logo-bootstrap">
-					<img src="<c:url value='/static/default/img/logo/bootstrap-1.png' />" />
+				<div class="info-tools">
+					<div class="logo-img logo-eclipse">
+						<img src="<c:url value='/static/default/img/logo/eclipse.jpg' />" />
+					</div>
+					<div class="logo-img logo-intellij">
+						<img src="<c:url value='/static/default/img/logo/intellij.png' />" />
+					</div>
+					<div class="logo-img logo-atom">
+						<img src="<c:url value='/static/default/img/logo/atom.png' />" />
+					</div>
+					<div class="logo-img logo-brackets">
+						<img src="<c:url value='/static/default/img/logo/brackets.png' />" />
+					</div>
 				</div>
 			</div>
-			<div class="info-tools">
-				<div class="logo-img logo-eclipse">
-					<img src="<c:url value='/static/default/img/logo/eclipse.jpg' />" />
-				</div>
-				<div class="logo-img logo-intellij">
-					<img src="<c:url value='/static/default/img/logo/intellij.png' />" />
-				</div>
-				<div class="logo-img logo-atom">
-					<img src="<c:url value='/static/default/img/logo/atom.png' />" />
-				</div>
-				<div class="logo-img logo-brackets">
-					<img src="<c:url value='/static/default/img/logo/brackets.png' />" />
-				</div>
+			<div class="info-box-2">
+				<a href="<c:url value='/downloadPDF' />"><div id="downloadPDF" class="download">
+					<div class="downloadText"> <span><i class="fa fa-cloud-download" aria-hidden="true"></i>Download CV</span> </div>
+					<div class="downloadImg"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
+				</div></a>
 			</div>
-		</div>
-		<div class="info-box-2">
-			<a href="<c:url value='/downloadPDF' />"><div id="downloadPDF" class="download">
-				<div class="downloadText"> <span><i class="fa fa-cloud-download" aria-hidden="true"></i>Download</span> </div>
-				<div class="downloadImg"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
-			</div></a>
 		</div>
 	</div>
 	
@@ -136,5 +141,7 @@
 
 	<script type="text/javascript"
 		src="<c:url value='/static/default/js/lib/data.js' />"></script>
+	<script type="text/javascript"
+		src="<c:url value='/static/default/js/lib/imgRotate.js' />"></script>
 </body>
 </html>

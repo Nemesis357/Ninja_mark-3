@@ -41,7 +41,7 @@ body {
 /* --- Contact page --- */
 
 #bodyBackground {
-	background-image: url("../../themes/springNature/tree.jpg");
+	background-image: url("img/tree.jpg");
 }
 
 #bodyBackground div {
@@ -58,7 +58,7 @@ body {
     right: 5%;
     transform: translateY(-50%);
     min-width: 570px;
-    background: url(scroll.png) no-repeat top left;
+    background: url(img/scroll.png) no-repeat top left;
     background-size: 100% 100%;
     padding: 106px 50px 119px 50px;
     color: #0c0f23;
@@ -99,9 +99,36 @@ body {
 }
 
 
+.aboutContainerInfo {
+	padding: 100px 0;
+}
 
+.wrapperTop {
+	position: relative;
+	background: url("img/field_2.jpg") no-repeat top left;
+	background-size: cover;
+}
 
+.wrapperBody:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#002f4b,#0f5d6b);
+	opacity: .4; 
+}
 
+.wrapperBottom {
+	position: relative;
+	background: url("img/field_3.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+
+.wrapperTop div.bar-wrap label {
+	color: #dcdbdb;
+}
 
 
 
