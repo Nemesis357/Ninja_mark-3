@@ -46,7 +46,7 @@ public class MainController {
 			}
 
 			if (logout != null) {
-				model.addObject("message", "Logged out from JournalDEV successfully.");
+				model.addObject("message", "Logged out from Ninja Site successfully.");
 			}
 
 			model.setViewName("login");
