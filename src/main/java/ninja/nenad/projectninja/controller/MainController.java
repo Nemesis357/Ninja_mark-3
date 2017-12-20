@@ -30,6 +30,11 @@ public class MainController {
 	public String aboutCtrl() {
 		return "about";
 	}
+	
+	@RequestMapping(value = { "/projects" }, method = RequestMethod.GET)
+	public String projectsCtrl() {
+		return "projects";
+	}
 
 	@RequestMapping(value = { "/login" }, method = RequestMethod.GET)
 	public ModelAndView loginCtrl(@RequestParam(value = "error",required = false) String error,

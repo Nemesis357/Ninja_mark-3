@@ -19,7 +19,7 @@
 		class="hamburger hamburger-2"></span> <span
 		class="hamburger hamburger-3"></span>
 	</label> <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i>
-	</a> <a href="#" class="menu-item"> <i class="fa fa-plus"></i>
+	</a> <a href="${contextPath}/projects" class="menu-item"> <i class="fa fa-plus"></i>
 	</a> <a href="${contextPath}/contact" class="menu-item"> <i class="fa fa-envelope"></i>
 	</a> <a href="${contextPath}/about" class="menu-item"> <i class="fa fa-user" aria-hidden="true"></i>
 	</a> <a href="${contextPath}/home" class="menu-item"> <i class="fa fa-home" aria-hidden="true"></i>
