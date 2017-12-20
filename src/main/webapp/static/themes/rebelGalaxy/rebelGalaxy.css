@@ -407,6 +407,65 @@ body {
 }
 
 
+/* Login */
+
+#loginBcg {
+	background: url("nano.jpg") no-repeat left top; 
+	background-size: cover;
+}
+
+.loginOverlay {
+	background-color: rgba(0,0,0,0.5)
+}
+
+#loginSection {
+	outline: solid 10px #0d0db3;
+}
+
+.loginContainer {
+    background-color: #151515;
+}
+
+#loginBtn:after {
+	background-color: #0d0db3;
+}
+
+#loginBtn:hover {
+	color: #0d0db3;
+	box-shadow: 0px -1px 10px 2px #0d0db3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

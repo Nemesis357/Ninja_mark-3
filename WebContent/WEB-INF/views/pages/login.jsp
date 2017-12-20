@@ -10,40 +10,44 @@
 <meta name="_csrf" content="${_csrf.token}"/>
 <meta name="_csrf_header" content="${_csrf.headerName}"/>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<link href="<c:url value="/static/default/css/login.css" />"
+	rel="stylesheet">
 </head>
 <body>
 
-<h2>This is a Login Page</h2>
+<div id="loginBcg"><div class="loginOverlay"></div></div>
 
 <div id="loginSection">
-	<c:if test="${not empty error}">
-		<div class="error">${error}</div>
-	</c:if>
-	<c:if test="${not empty msg}">
-		<div class="msg">${msg}</div>
-	</c:if>
-	<form method="POST" action="<c:url value='/login' />" id="loginForm">
-		<div class="loginFormField">
-			<label path="username">
-				<s:message code="ninja.username" text="Username" />
-			</label>
-			<span class="input-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
-			<input type="text" name="username" />
-		</div>
-		<div class="loginFormField">
-			<label path="password">
-				<s:message code="ninja.password" text="Password" />
-			</label>
-			<span class="input-icon"><i class="fa fa-key" aria-hidden="true"></i></span>
-			<input type="text" name="password" />
-		</div>
-		<div class="loginFormField">
-			<button id="loginBtn" class="submit formButton" type="submit">
-				<s:message code="ninja.login" text="Login" />
-			</button>
-		</div>
-	</form>
+	<div class="loginContainer">
+		<h2>This is a Login Page</h2>
+		<c:if test="${not empty error}">
+			<div class="error">${error}</div>
+		</c:if>
+		<c:if test="${not empty msg}">
+			<div class="msg">${msg}</div>
+		</c:if>
+		<form method="POST" action="<c:url value='/login' />" id="loginForm">
+			<div class="loginFormField">
+				<label path="username">
+					<s:message code="ninja.username" text="Username" />
+				</label>
+				<span class="input-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+				<input type="text" name="username" />
+			</div>
+			<div class="loginFormField">
+				<label path="password">
+					<s:message code="ninja.password" text="Password" />
+				</label>
+				<span class="input-icon"><i class="fa fa-key" aria-hidden="true"></i></span>
+				<input type="text" name="password" />
+			</div>
+			<div class="loginFormField">
+				<button id="loginBtn" class="submit formButton" type="submit">
+					<s:message code="ninja.login" text="Login" />
+				</button>
+			</div>
+		</form>
+	</div>
 </div>
 
 </body>
