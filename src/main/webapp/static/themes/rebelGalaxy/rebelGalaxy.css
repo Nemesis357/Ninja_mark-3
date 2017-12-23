@@ -436,8 +436,19 @@ body {
 }
 
 
+/* Projects */
 
+.projectsContainer {
+	outline: 15px solid #0d0db3;
+}
 
+/* .projectsHeading:after { */
+/* 	background-color: #0d0db3; */
+/* } */
+
+.projectsContent:after, .projectsContent:before, .projectsHeading:after {
+    background-color: #0d0db3;
+}
 
 
 
