@@ -26,6 +26,11 @@
 		src="<c:url value='/static/default/js/lib/jquery-3.2.1.min.js' />"></script>
 </head>
 <body>
+
+	<div id="loading">
+	  <img id="loading-image" src="<c:url value='/static/default/img/startUp/ajax-loader.gif' />" alt="Loading..." />
+	</div>
+
 	<div id="settingsMenu">
 		<tiles:insertAttribute name="settingsMenu" />
 	</div>
@@ -45,5 +50,10 @@
 		type="text/javascript"></script>
 	<script type="text/javascript" src="<c:url value='/static/default/js/lib/jquery-3.2.1.min.js' />"></script>
 	<script type="text/javascript" src="<c:url value='/static/default/js/app.js' />" ></script>
+	<script language="javascript" type="text/javascript">
+	     $(window).on("load", function() {
+		     $('#loading').hide();
+		  });
+	</script>
 </body>
 </html>
