@@ -14,6 +14,10 @@
 	<%-- 	Current Locale : ${pageContext.response.locale} --%>
 	<%-- 	<a href="${contextPath}/about">About</a> --%>
 	<%-- 	<s:message code="ninja.homeTitle" text="default text" /> --%>
+	
+	<div id="startAnim">
+		<div class="springAnim" data-text="Powered by Spring">Powered by Spring</div>
+	</div>
 
 	<div id="homeScreen"
 		style="background-image: url('${contextPath}/<s:theme code="homeBackground"/>')">

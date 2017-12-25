@@ -1,4 +1,49 @@
 $(document).ready(function() {
+	
+	// Startup Animation
+	$(".springAnim").addClass("animated");
+	
+	
+	  if(typeof(localStorage.getItem("welcomeShown")) != null && localStorage.getItem("welcomeShown") != "true"){
+		  setTimeout(function(){
+		    $(".springAnim").animate({ opacity: 1 },3000);
+		    
+		    setTimeout(function(){$(".springAnim").addClass("glitchEffect");}, 5000);
+		    setTimeout(function(){$(".springAnim").removeClass("glitchEffect").addClass("startUpShadow");}, 7000);
+//		    setTimeout(function(){$(".springAnim").addClass("startUpFadeOut");}, 8000);
+		    
+		    
+		    setTimeout(function(){$("#startAnim").addClass("startUpFadeOut");}, 8500);
+		    setTimeout(function(){$("#startAnim").remove();}, 8700);
+		    
+		    
+		    localStorage.setItem("welcomeShown","true");
+		  }, 500);
+	  }else{
+//	    $(".springAnim").css("opacity",1);
+		  $("#startAnim").remove();
+	  }
+
+//	  $(".btn-explore").addClass("pulse-anim");
+	
+
+	$("#clear").on("click",function(){
+	  localStorage.clear();
+	  $(this).html("CLEARED").css("color","red");
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	// Settings Menu Logic
 	$(document).on('click', '#settingsMenuToggle > i', function() {
@@ -39,11 +84,6 @@ $(document).ready(function() {
 	
 	
 	// About social animation
-//    $(document).on("mouseover", ".nav-elem", function() {
-//    	console.log($(this));
-//    	coneole.log($(this).offset());
-//    })
-    
     $(".nav-elem").on({
         mouseenter: function () {
         	$(".animation").css("left", $(this).offset().left + "px");
@@ -67,5 +107,5 @@ $(document).ready(function() {
     });
 	
 	
-    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+//    var randomColor = Math.floor(Math.random()*16777215).toString(16);
 });

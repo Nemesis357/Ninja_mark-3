@@ -20,6 +20,7 @@
 <div id="loginSection">
 	<div class="loginContainer">
 		<h2>This is a Login Page</h2>
+		<button id="clear">Clear localStorage</button>
 		<c:if test="${not empty error}">
 			<div class="error">${error}</div>
 		</c:if>
