@@ -125,7 +125,12 @@
 		</div>
 	</div>
 
-
+	<div class="backToTop">
+		<div>
+			<span><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+			<span>Back to Top</span>
+		</div>
+	</div>
 
 
 	<!-- 		<h2 class="projectsHeading"> -->
@@ -177,5 +182,7 @@
 	<%--  	<script type="text/javascript" src="<c:url value='/static/default/js/lib/dat.gui.min.js' />"></script>  --%>
 	<script type="text/javascript"
 		src="<c:url value='/static/default/js/lib/zoom.js' />"></script>
+	<script type="text/javascript"
+		src="<c:url value='/static/default/js/lib/projectsScroll.js' />"></script>
 </body>
 </html>

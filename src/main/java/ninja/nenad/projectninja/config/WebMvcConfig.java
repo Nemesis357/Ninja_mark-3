@@ -220,7 +220,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		CookieThemeResolver resolver = new CookieThemeResolver();
 		resolver.setCookieMaxAge(2400);
 		resolver.setCookieName("mythemecookie");
-		resolver.setDefaultThemeName("rebelGalaxy");
+		resolver.setDefaultThemeName("businessBoring");
 		// resolver.setCookieName("my-theme-cookie");
 		return resolver;
 	}

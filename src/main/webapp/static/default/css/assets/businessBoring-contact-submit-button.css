@@ -2,8 +2,8 @@
   display:inline-block;
   position:relative;
   padding:5px 10px;
-  border:2px solid #6386ac;
-  color:#6386ac;
+  border:2px solid #ada793;
+  color:#ada793;
   font-family:'Dancing Script',serif;
   font-style:italic;
   font-size:16px;
@@ -30,7 +30,7 @@
   color:#d0d0d0;
 }
 .formButton:hover:after{  
-  border:2px solid #6386ac;
+  border:2px solid #ada793;
   width: calc(100% - 10px);
   height: calc(100% + 10px); 
 }
@@ -69,6 +69,11 @@
 	color: #e50707;
 }
 
+.error:hover:after, .error:focus:after {
+	border: 2px solid #e50707 !important;
+	box-shadow: 0 0 10px 0 #e50707;
+}
+
 .sent:after {
 	box-shadow: 0 0 10px 0 #44e507 !important;
     border: 2px solid #44e507 !important;
@@ -80,7 +85,7 @@
 
 
 .formButton:hover:after, .formButton:focus:after{  
-  border:2px solid #6386ac;
+  border:2px solid #ada793;
   width: calc(100% - 10px);
   height: calc(100% + 10px); 
 }

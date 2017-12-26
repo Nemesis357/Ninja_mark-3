@@ -9,12 +9,12 @@ body {
 	border: 1px solid #1c16c7 !important;
 }
 
-#homeScreen {
+#site-content #homeScreen {
 	background-size: initial;
 	background-position: top right;
 }
 
-#homeScreen .homeTitle {
+#site-content #homeScreen .homeTitle {
 	top: initial;
 	bottom: 300px;
 	left: 150px;
@@ -442,11 +442,7 @@ body {
 	outline: 15px solid #0d0db3;
 }
 
-/* .projectsHeading:after { */
-/* 	background-color: #0d0db3; */
-/* } */
-
-.projectsContent:after, .projectsContent:before, .projectsHeading:after {
+.projectsContent:after, .projectsContent:before, .projectsHeading:after, .backToTop {
     background-color: #0d0db3;
 }
 
