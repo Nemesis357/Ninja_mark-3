@@ -168,11 +168,7 @@ body {
 	outline: 15px solid #00ff40;
 }
 
-/* .projectsHeading:after { */
-/* 	background-color: #00ff40; */
-/* } */
-
-.projectsContent:after, .projectsContent:before, .projectsHeading:after {
+.projectsContent:after, .projectsContent:before, .projectsHeading:after, .backToTop {
     background-color: #00ff40;
 }
 

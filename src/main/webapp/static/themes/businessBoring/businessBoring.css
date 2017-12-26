@@ -32,6 +32,22 @@ body {
 	color: #795548;
 }
 
+/* --- About page --- */
+#site-content .aboutContainerFlex .aboutHeading:after {
+	background-color: #ada793;
+	animation: initial;
+}
+
+#site-content .aboutContainerFlex .about_section_2 p i {
+	color: #ada793;
+}
+
+#site-content .bar span {
+	background-color: #ada793;
+    background: initial;
+    animation: initial;
+}
+
 /* --- Contact page --- */
 
 #bodyBackground {
@@ -49,13 +65,37 @@ body {
 #formWindow .formContainer {
 	position: absolute;
 	top: 50%;
-    left: 25%;
+    left: 30%;
     transform: translate(-50%, -50%);
-    min-width: 450px;
-    background: url("img/tablet_3.png") no-repeat top left;
+    min-width: 600px;
+    //background: url("img/tablet_3.png") no-repeat top left;
+    background-color: #2a2529;
     background-size: 100% 100%;
     padding: 67px 35px 69px 36px;
-    color: #6386ac;
+    color: #ada793;
+}
+
+#formWindow .formContainer:before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	bottom: -10px;
+	left: -10px;
+	right: -10px;
+	background-color: #ada793;
+	z-index: -1;
+}
+
+#formWindow .formContainer:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #2a2529;
+	z-index: -1;
+    box-shadow: 0 0 12px 0px black;
 }
 
 #formWindow .formContainer h2 {
@@ -69,7 +109,7 @@ body {
 
 #formWindow .formContainer .formField input:not([type=submit]), textarea {
 	background-color: #ffffff00;
-    border-bottom: 1px solid #6386ac;
+    border-bottom: 1px solid #ada793;
     color: #cacaca;
     font-size: 15px;
 }
@@ -165,14 +205,9 @@ body {
 	outline: 15px solid #ada793;
 }
 
-/* .projectsHeading:after { */
-/* 	background-color: #ada793; */
-/* } */
-
-.projectsContent:after, .projectsContent:before, .projectsHeading:after {
+.projectsContent:after, .projectsContent:before, .projectsHeading:after, .backToTop {
     background-color: #ada793;
 }
-
 
 
 

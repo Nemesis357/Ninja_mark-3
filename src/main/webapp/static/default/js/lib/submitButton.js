@@ -110,7 +110,7 @@ $(document).ready(function() {
 	    
 	    var self = this;
 	    var form = $('#submitForm');
-	    var url = '/project-ninja/submit';
+	    var url = '/project-ninja-mk-1/listMessages';
 	    var data = $("#submitForm").serializeArray();
 	    var readyData = JSON.stringify({"name" : data[0].value, "company" : data[1].value, "email" : data[2].value, "message" : data[3].value});
 	    
@@ -165,7 +165,9 @@ $(document).ready(function() {
 		$(this).text("Sending");
 		var self = this;
 	    
-	    var url = '/project-ninja/listMessages';
+	    var url = '/project-ninja-mk-1/listMessages';
+
+console.log("1");
 	    
 	    $.ajax({
 	    	headers: { 
