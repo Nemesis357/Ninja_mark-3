@@ -2,6 +2,7 @@ package ninja.nenad.projectninja.config;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.Properties;
 
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +13,15 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.env.Environment;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.ui.context.support.ResourceBundleThemeSource;
 import org.springframework.validation.MessageCodesResolver;
 import org.springframework.validation.Validator;
@@ -49,6 +53,10 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 @Configuration
 @ComponentScan("ninja.nenad.projectninja")
 @PropertySource("classpath:properties/ninjaConnection.properties")
+@PropertySources({
+	@PropertySource("classpath:properties/ninjaConnection.properties"),
+	@PropertySource("classpath:properties/ninjaEmail.properties")
+})
 @EnableWebMvc
 @Import({ SecurityConfig.class })
 public class WebMvcConfig implements WebMvcConfigurer {
@@ -104,6 +112,28 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	//
 	// return ninja;
 	// }
+	
+	// Email sending service
+	@Bean
+	public JavaMailSender getJavaMailSender() {
+		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+	    mailSender.setHost("smtp.gmail.com");
+	    mailSender.setPort(587);
+	    
+	    mailSender.setUsername("my.gmail@gmail.com");
+	    mailSender.setPassword("password");
+	     
+//	    mailSender.setUsername("${spring.mail.username}");
+//	    mailSender.setPassword("${spring.mail.password}");
+	     
+	    Properties props = mailSender.getJavaMailProperties();
+	    props.put("mail.transport.protocol", "smtp");
+	    props.put("mail.smtp.auth", "true");
+	    props.put("mail.smtp.starttls.enable", "true");
+	    props.put("mail.debug", "true");
+	     
+	    return mailSender;
+	}
 
 	@Bean
 	public MessageSource messageSource() {
