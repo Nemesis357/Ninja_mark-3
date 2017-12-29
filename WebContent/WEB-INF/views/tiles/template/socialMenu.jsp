@@ -10,12 +10,25 @@
 	rel="stylesheet"></link>
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id))
+				return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<div class="share-buttons cn-wrapper">
 		<ul>
+			<li><a class="twitter-share-button"
+				href="#"> <span aria-hidden="true"
+					class="icon-twitter" data-js="twitter-share"></span></a></li></li>
 			<li><a href="#"><span aria-hidden="true"
-					class="icon-twitter"></span></a></li>
-			<li><a href="#"><span aria-hidden="true"
-					class="icon-facebook"></span></a></li>
+					class="icon-facebook" data-js="facebook-share"></span></a></li>
 			<li><a href="#"><span aria-hidden="true"
 					class="icon-google-plus"></span></a></li>
 			<li><a href="#"><span aria-hidden="true" class="icon-reddit"></span></a></li>
@@ -24,5 +37,8 @@
 			<span aria-hidden="true" class="icon-share"></span>
 		</button>
 	</div>
+	
+	<script type="text/javascript"
+		src="<c:url value='/static/default/js/lib/socialShare.js' />"></script>
 </body>
 </html>

@@ -131,11 +131,11 @@
 	</div>
 	
 	<div class="aboutContainerFlex aboutContainerSocial">
-		<div class="facebook nav-elem"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-		<div class="linkedin nav-elem"><i class="fa fa-linkedin-square" aria-hidden="true"></i></div>
-		<div class="instagram nav-elem"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-		<div class="github nav-elem"><i class="fa fa-github" aria-hidden="true"></i></div>
-		<div class="skype nav-elem"><i class="fa fa-skype" aria-hidden="true"></i></div>
+		<div class="facebook nav-elem"><a href="<c:url value='https://www.facebook.com/nenadn89' />" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+		<div class="linkedin nav-elem"><a href="<c:url value='https://www.linkedin.com/in/nenad-nikolic-71468486' />" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></div>
+		<div class="instagram nav-elem"><a href="<c:url value='https://www.instagram.com/nenad_niko/' />" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+		<div class="github nav-elem"><a href="<c:url value='https://github.com/Nemesis357' />" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></div>
+		<div class="skype nav-elem"><a href="<c:url value='skype:nenad.nikolic357?add' />" target="_blank"><i class="fa fa-skype" aria-hidden="true"></i></a></div>
 		<div class="animation start-home"></div>
 	</div>
 

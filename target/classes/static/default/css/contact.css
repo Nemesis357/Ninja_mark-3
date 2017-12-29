@@ -59,7 +59,7 @@ input:-webkit-autofill {
 #formWindow .formField textarea {
   min-height: 250px;
   resize: none;
-  padding-top: 20px;
+  margin-top: 20px;
 }
 #formWindow .formField label[for=message] {
   position: absolute;
