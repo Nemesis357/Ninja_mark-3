@@ -5,6 +5,7 @@ body {
 
 #settingsMenuInner{
 	border: 1px solid #ada793 !important;
+	color: #ada793;
 }
 
 #homeScreen .overlay {

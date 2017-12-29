@@ -65,6 +65,11 @@
 	color: #fff;
 }
 
+.nav-elem a {
+	display: block;
+	height: 100%;
+}
+
 .facebook {
 	color: #4267b2;
 }
