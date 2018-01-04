@@ -31,151 +31,106 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
 					data-image="<c:url value="/static/default/img/projects/restaurant.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
-						<a hreh="https://nemesis357.github.io/Mark-08/" target="_blank" class="linkButton">Link to a
-							project page...</a>
+						<a href="https://nemesis357.github.io/Mark-08/" target="_blank"
+							class="linkButton">Link to a project page...</a>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
 					data-image="<c:url value="/static/default/img/projects/doctorCare.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
-						<a hreh="https://nemesis357.github.io/Mark-2/index.html" target="_blank" class="linkButton">Link to a
-							project page...</a>
+						<a href="https://nemesis357.github.io/Mark-2/index.html"
+							target="_blank" class="linkButton">Link to a project page...</a>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
 					data-image="<c:url value="/static/default/img/projects/library.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
-						<a hreh="https://nemesis357.github.io/Mark-3/" target="_blank" class="linkButton">Link to a
-							project page...</a>
+						<a href="https://nemesis357.github.io/Mark-3/" target="_blank"
+							class="linkButton">Link to a project page...</a>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
 					data-image="<c:url value="/static/default/img/projects/yacht.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
-						<a hreh="https://nemesis357.github.io/Mark-10/" target="_blank" class="linkButton">Link to a
-							project page...</a>
+						<a href="https://nemesis357.github.io/Mark-10/" target="_blank"
+							class="linkButton">Link to a project page...</a>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
 					data-image="<c:url value="/static/default/img/projects/revision.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
-						<a hreh="https://nemesis357.github.io/Mark-5/#" target="_blank" class="linkButton">Link to a
-							project page...</a>
+						<a href="https://nemesis357.github.io/Mark-5/#" target="_blank"
+							class="linkButton">Link to a project page...</a>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
 					data-image="<c:url value="/static/default/img/projects/designmodo.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
-						<a hreh="https://nemesis357.github.io/Mark-09/" target="_blank" class="linkButton">Link to a
-							project page...</a>
+						<a href="https://nemesis357.github.io/Mark-09/" target="_blank"
+							class="linkButton">Link to a project page...</a>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
 					data-image="<c:url value="/static/default/img/projects/portfolio_2.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
-						<a hreh="https://nemesis357.github.io/portfolio/" target="_blank" class="linkButton">Link to a
-							project page...</a>
+						<a href="https://nemesis357.github.io/portfolio/" target="_blank"
+							class="linkButton">Link to a project page...</a>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
 					data-image="<c:url value="/static/default/img/projects/portfolio_1.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
-						<a hreh="https://nemesis357.github.io/Mark-19/" target="_blank" class="linkButton">Link to a
-							project page...</a>
+						<a href="https://nemesis357.github.io/Mark-19/" target="_blank"
+							class="linkButton">Link to a project page...</a>
 					</div>
 				</div>
 			</div>
-			
-			
-			
+
+
+
 		</div>
 	</div>
 
 	<div class="backToTop">
 		<div>
-			<span><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
-			<span>Back to Top</span>
+			<span><i class="fa fa-arrow-left" aria-hidden="true"></i></span> <span>Back
+				to Top</span>
 		</div>
 	</div>
-
-
-	<!-- 		<h2 class="projectsHeading"> -->
-	<%-- 			<s:message code="ninja.projectsHeading" --%>
-	<%-- 	 			text="My projects... So far..." /> --%>
-	<!-- 		</h2> -->
-
-	<!-- 		<div class="projectHolder"> -->
-	<!-- 			<div class="projectBox">		 -->
-	<!-- 				<div class="thumb project_1"> -->
-	<%-- 					<a href="#"> <span>the optimist lives on</span> --%>
-	<!-- 					</a> -->
-	<!-- 				</div> -->
-	<!-- 			</div> -->
-	<!-- 			<div class="projectBox"> -->
-	<!-- 				<div class="thumb project_2"> -->
-	<%-- 					<a href="#"> <span>the optimist lives on</span> --%>
-	<!-- 					</a> -->
-	<!-- 				</div> -->
-	<!-- 			</div> -->
-	<!-- 			<div class="projectBox"> -->
-	<!-- 				<div class="thumb project_3"> -->
-	<%-- 					<a href="#"> <span>the optimist lives on</span> --%>
-	<!-- 					</a> -->
-	<!-- 				</div> -->
-	<!-- 			</div> -->
-	<!-- 			<div class="projectBox"> -->
-	<!-- 				<div class="thumb project_4"> -->
-	<%-- 					<a href="#"> <span>the optimist lives on</span> --%>
-	<!-- 					</a> -->
-	<!-- 				</div> -->
-	<!-- 			</div> -->
-	<!-- 			<div class="projectBox"> -->
-	<!-- 				<div class="thumb project_5"> -->
-	<%-- 					<a href="#"> <span>the optimist lives on</span> --%>
-	<!-- 					</a> -->
-	<!-- 				</div> -->
-	<!-- 			</div> -->
-	<!-- 			<div class="projectBox"> -->
-	<!-- 				<div class="thumb project_6"> -->
-	<%-- 					<a href="#"> <span>the optimist lives on</span> --%>
-	<!-- 					</a> -->
-	<!-- 				</div> -->
-	<!-- 			</div> -->
-	<!-- 		</div> -->
 
 
 	<%-- 	<script type="text/javascript" src="<c:url value='/static/default/js/lib/sketch.min.js' />"></script>  --%>

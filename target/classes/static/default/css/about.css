@@ -7,10 +7,6 @@ a {
   width: 100%;
 }
 
-.wrapperTop {
-  height: 100vh;
-}
-
 .aboutContainer {
   width: 100%;
   max-width: 1200px;
@@ -393,5 +389,16 @@ div.bar-wrap div.bar.yellow:after {
 
   100% {
     top: 0;
+  }
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1280px) {
+  .aboutContainerFlex .aboutHeading {
+    font-size: 25px;
+  }
+
+  .aboutContainerFlex .about_section_2 p {
+    font-size: 15px;
   }
 }
