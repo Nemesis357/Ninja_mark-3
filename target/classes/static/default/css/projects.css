@@ -1,6 +1,6 @@
 .backToTop {
   position: fixed;
-  bottom: 10%;
+  bottom: 10px;
   padding: 10px 20px;
   transition: right 1s ease, border-radius 2s, color 0.4s, opacity 0.6s, box-shadow 1s;
   right: -220px;
@@ -91,6 +91,7 @@ body {
   transform: rotate(30deg) skew(40deg) skewY(70deg);
   box-shadow: inset 0 0 3px 3px black;
   -webkit-backface-visibility: hidden;
+  padding: 2px;
 }
 .projectsContent:before {
   content: "";
@@ -103,10 +104,11 @@ body {
   transform: rotate(77deg) skew(30deg) skewY(70deg);
   box-shadow: inset 0 0 3px 3px black;
   -webkit-backface-visibility: hidden;
+  padding: 1px;
 }
 
 .projectsHeading {
-  padding: 47px 0 170px 50px;
+  padding: 47px 0 170px 20px;
   font-size: 32px;
   position: relative;
 }
@@ -121,6 +123,7 @@ body {
   transform: rotate(-30deg) skewX(70deg);
   box-shadow: inset 0 0 3px 3px black;
   -webkit-backface-visibility: hidden;
+  padding: 1px;
 }
 
 .projects-box-2 {
@@ -477,22 +480,16 @@ $btn-color-tint: tint($btn-color);
   transition: transform .5s ease-out;
 }
 
-.txt {
+.over {
   position: absolute;
   z-index: 2;
   right: 0;
-  bottom: 10%;
+  bottom: 0;
   left: 0;
-  font-family: 'Roboto Slab', serif;
-  font-size: 9px;
-  line-height: 12px;
-  text-align: center;
-  cursor: default;
-}
-
-.x {
-  font-size: 32px;
-  line-height: 32px;
+  top: 0;
+  background-color: rgba(41, 41, 41, 0.5);
+  transition: all 0.6s ease;
+  opacity: 1;
 }
 
 /*
@@ -630,5 +627,48 @@ $btn-color-tint: tint($btn-color);
   100% {
     transform: rotate(90deg) translateX(0);
     margin-bottom: 0;
+  }
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1280px) {
+  .projectsContainer {
+    max-width: 992px;
+  }
+
+  .projectsContent .tiles {
+    height: 360px;
+  }
+
+  .projectsContent .projectsHeading {
+    padding: 47px 0 60px 20px;
+    font-size: 22px;
+  }
+
+  .projectsContent:before {
+    bottom: 750px;
+    left: 100px;
+    height: 600px;
+    width: 580px;
+    transform: rotate(45deg) skew(-10deg) skewY(70deg);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .projectsContainer {
+    max-width: initial;
+    width: 90%;
+  }
+
+  .backToTop {
+    right: 0;
+    color: #fff;
+  }
+  .backToTop div span:first-child i {
+    transform: rotate(90deg);
+    -webkit-animation: arrow-wiggle 0.8s infinite;
+    animation: arrow-wiggle 0.8s infinite;
+  }
+  .backToTop div span:last-child {
+    opacity: 1;
   }
 }
