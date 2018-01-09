@@ -228,8 +228,30 @@ body {
 
 
 
+/* RESPONSIVE */
 
-
-
+@media only screen and (max-width: 768px) {
+	#homeScreen {background-position: center;}
+	
+	
+	#site-content #homeScreen .homeTitle {top: 33%;}
+	.homeTitle svg #title {font-size: 4rem;}
+/* 	.homeTitle svg #subtitle {font-size: 2rem;} */
+	#formWindow .formContainer {
+		padding: 100px 60px;
+    	min-width: initial;
+	}
+	#formWindow #submitForm .formField label:not([for=message]), #formWindow #submitForm .formField label[for=message] {
+		font-size: 13px;
+	}
+	
+	/* 	About */
+	#site-content .wrapperTop {background: url(img/landscape.jpg) no-repeat top left; background-size: cover;}
+	.aboutContainerFlex .about_section_1 {order: 3;}
+	.wrapperBody .aboutContainerFlex .about_section_2 {padding-top: 115px;}
+	.sec2_box1 section.data {padding: 0; margin: 0;}
+	.aboutContainerFlex .about_section_1 .activeImage {left: 30px; bottom: 30px;}
+	#loginBcg{background: url(img/abstractGlass.jpg) no-repeat left top; background-size: cover;}
+}
 
 

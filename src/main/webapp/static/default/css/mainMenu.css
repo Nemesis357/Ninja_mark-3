@@ -156,3 +156,28 @@
 	transition-duration: 480ms;
 	transform: translate3d(-114.40705px, 11.66307px, 0);
 }
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 768px) {
+	.menu-item, .menu-open-button {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
