@@ -263,16 +263,33 @@ body {
 		padding: 40px 0;
 	}
 	
-	.wrapperBody .downloadText span {
-		font-size: 30px;
-	}
-	
-	.wrapperBody .downloadImg {
-		font-size: 60px;
-	}
 }
 
-
+@media only screen and (max-width: 768px) {
+	#homeScreen .homeTitle h1 {
+	    font-size: 30px;
+	}
+	#homeScreen .homeTitle h2 {
+	    font-size: 22px;
+	}
+	#site-content .aboutContainerFlex .aboutHeading:after {
+		right: 0;
+	}
+	#formWindow .formContainer {
+		min-width: initial;
+    	top: 50%;
+	}
+	#formWindow #submitForm .formField label:not([for=message]), #formWindow #submitForm .formField label[for=message] {
+		font-size: 11px;
+	}
+	
+	/* 	About */
+	#site-content .wrapperTop {background: url(img/wall.jpg) no-repeat top left; background-size: cover;}
+	.aboutContainerFlex .about_section_1 {order: 3;}
+	.wrapperBody .aboutContainerFlex .about_section_2 {padding-top: 115px;}
+	.sec2_box1 section.data {padding: 0; margin: 0;}
+	.aboutContainerFlex .about_section_1 .activeImage {left: 30px; bottom: 30px;}
+}
 
 
 

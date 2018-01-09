@@ -82,3 +82,18 @@
 #loginBtn:hover:after {
   height: 4px;
 }
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  #loginSection {
+    width: 90%;
+  }
+
+  .loginFormField label {
+    font-size: 12px;
+  }
+
+  .loginFormField input {
+    padding: 5px 10px;
+  }
+}

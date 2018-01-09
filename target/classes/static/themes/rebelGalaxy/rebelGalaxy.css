@@ -450,7 +450,7 @@ body {
 
 
 
-
+/* RESPONSIVE */
 
 @media only screen and (max-width: 1440px) {
 	#formWindow {
@@ -481,7 +481,10 @@ body {
 	#formWindow #submitForm .formField label:not([for=message]), #formWindow #submitForm .formField label[for=message] {
 		font-size: 15px;
 	}
-	#formWindow #submitForm .formField input:not([type=submit]), #formWindow #submitForm .formField textarea {
+	#formWindow #submitForm .formField input:not([type=submit]) {
+		padding: 6px 15px 6px 45px;
+	}
+	#formWindow #submitForm .formField textarea {
 		padding: 6px 15px;
 	}
 	#submitForm .formButton{
@@ -489,7 +492,34 @@ body {
 	}
 }
 
-
+@media only screen and (max-width: 768px) {
+	#site-content #homeScreen {
+		background-size: 90%;
+	}
+	#site-content #homeScreen .homeTitle {
+	    bottom: 200px;
+	    left: 50px;
+	}
+	h1.homeTitleEffect {font-size: 45px;}
+	h2.homeTitleEffect {font-size: 30px;}
+	#formWindow {
+		width: 100%;
+	    height: 80%;
+	    margin: 0;
+	    bottom: 0;
+	    left: 0;
+	    transform: initial;
+	    position: absolute;
+	    border: initial;	
+	}
+	#formWindow .formContainer {box-shadow: initial;}
+	#submitForm .formButton {
+		padding: 5px 10px;
+		border: 1px solid #e55707;
+		font-size: 0.6rem;
+	}
+	#site-content #loginBcg {background: url(lantern.jpg) no-repeat top center; background-size: cover;}
+}
 
 
 

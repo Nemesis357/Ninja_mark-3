@@ -672,3 +672,44 @@ $btn-color-tint: tint($btn-color);
     opacity: 1;
   }
 }
+@media only screen and (max-width: 768px) {
+  .projectsHeading:after {
+    top: -8px;
+    left: -70px;
+    width: 350px;
+    height: 120px;
+    transform: rotate(-1deg) skewX(70deg);
+  }
+
+  .projectsContent:after {
+    height: 600px;
+    width: 150px;
+    transform: rotate(80deg) skew(30deg) skewY(75deg);
+  }
+
+  .projectsContent:before {
+    bottom: 0px;
+    left: 50px;
+    transform: rotate(-18deg) skew(-10deg) skewY(70deg);
+  }
+
+  .projectsContent .tiles {
+    height: 200px;
+  }
+
+  .linkButton {
+    font-size: 0.5em;
+  }
+
+  .backToTop {
+    border-radius: 15px 0 0 0;
+  }
+
+  .backToTop:after {
+    width: 100%;
+  }
+
+  .backToTop div span:first-child, .backToTop div span:last-child {
+    font-size: 18px;
+  }
+}
