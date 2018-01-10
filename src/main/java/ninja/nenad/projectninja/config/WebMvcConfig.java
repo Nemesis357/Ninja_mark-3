@@ -226,7 +226,14 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	 */
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/static/**").addResourceLocations("static/");
+		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+	}
+	
+	@Override
+	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+		// TODO Auto-generated method stub
+//		WebMvcConfigurer.super.configureDefaultServletHandling(configurer);
+		configurer.enable();
 	}
 
 	// Theme support start
@@ -273,12 +280,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
 		// TODO Auto-generated method stub
 		WebMvcConfigurer.super.configureAsyncSupport(configurer);
-	}
-
-	@Override
-	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-		// TODO Auto-generated method stub
-		WebMvcConfigurer.super.configureDefaultServletHandling(configurer);
 	}
 
 	@Override
