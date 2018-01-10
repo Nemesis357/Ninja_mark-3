@@ -1,0 +1,118 @@
+@-webkit-keyframes autofill {
+  to {
+    color: #666;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+#bodyBackground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+#formWindow form {
+  text-align: center;
+  overflow: hidden;
+  padding: 10px;
+}
+#formWindow .formField {
+  margin-bottom: 15px;
+  position: relative;
+  transition: all 0.6s ease;
+}
+#formWindow .formField input:not([type=submit]), #formWindow .formField textarea {
+  padding: 10px 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  outline: none;
+  transition: all 0.6s;
+}
+#formWindow .formField input:not([type=submit]) {
+  padding-left: 45px;
+}
+#formWindow .formField label:not([for=message]) {
+  position: absolute;
+  top: 50%;
+  left: 45px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-style: italic;
+}
+#formWindow .formField label {
+  opacity: 1;
+  transition: top 0.5s, left 1.5s, opacity 0.8s;
+}
+#formWindow .formField textarea {
+  min-height: 250px;
+  resize: none;
+  margin-top: 20px;
+}
+#formWindow .formField label[for=message] {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  font-size: 20px;
+  font-style: italic;
+}
+#formWindow .input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+
+.ninjaContainer {
+  width: 70%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.ninjaContainer .ninja {
+  padding: 20px;
+  border: 1px solid orange;
+  position: relative;
+  left: -5000px;
+  transition: all 0.5s;
+}
+.ninjaContainer .ninjaId, .ninjaContainer .ninjaName, .ninjaContainer .ninjaCompany {
+  display: inline-block;
+  padding: 10px 30px 10px 0;
+}
+.ninjaContainer .ninjaEmail {
+  border: 1px solid silver;
+  display: inline-block;
+  padding: 5px 25px;
+  border-radius: 5px;
+}
+.ninjaContainer .ninjaDelete {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: red;
+  padding: 15px;
+  cursor: pointer;
+  border: 1px solid red;
+  font-size: 25px;
+  border-radius: 0 0 0 30px;
+}
+.ninjaContainer .ninjaDelete:hover {
+  box-shadow: -1px 1px 20px 1px red;
+}
+
+.submitDisable {
+  cursor: not-allowed !important;
+  opacity: 0.3;
+}
