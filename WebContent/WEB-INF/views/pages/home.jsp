@@ -46,7 +46,7 @@
 		<div class="overlay"></div>
 	</div>
 	<script type="text/javascript"
-		src="<c:url value='/static/default/js/lib/animatedParticles.js' />"></script>
+		src="<c:url value='/resources/static/default/js/lib/animatedParticles.js' />"></script>
 	<%-- background="${contextPath}/<s:theme code="homeBackground"/>" --%>
 </body>
 </html>

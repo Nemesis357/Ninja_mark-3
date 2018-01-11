@@ -8,7 +8,7 @@
 <head>
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->
 <!-- <title>Insert title here</title> -->
-<link href="<c:url value='/static/default/css/settingsMenu.css' />"
+<link href="<c:url value='/resources/static/default/css/settingsMenu.css' />"
 	rel="stylesheet"></link>
 
 </head>

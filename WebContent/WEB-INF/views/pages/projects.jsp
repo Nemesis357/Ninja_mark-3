@@ -136,8 +136,8 @@
 	<%-- 	<script type="text/javascript" src="<c:url value='/static/default/js/lib/sketch.min.js' />"></script>  --%>
 	<%--  	<script type="text/javascript" src="<c:url value='/static/default/js/lib/dat.gui.min.js' />"></script>  --%>
 	<script type="text/javascript"
-		src="<c:url value='/static/default/js/lib/zoom.js' />"></script>
+		src="<c:url value='/resources/static/default/js/lib/zoom.js' />"></script>
 	<script type="text/javascript"
-		src="<c:url value='/static/default/js/lib/projectsScroll.js' />"></script>
+		src="<c:url value='/resources/static/default/js/lib/projectsScroll.js' />"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link href="<c:url value='/static/default/css/socialMenu.css' />"
+<link href="<c:url value='/resources/static/default/css/socialMenu.css' />"
 	rel="stylesheet"></link>
 </head>
 <body>
@@ -39,6 +39,6 @@
 	</div>
 	
 	<script type="text/javascript"
-		src="<c:url value='/static/default/js/lib/socialShare.js' />"></script>
+		src="<c:url value='/resources/static/default/js/lib/socialShare.js' />"></script>
 </body>
 </html>
