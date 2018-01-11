@@ -12,12 +12,12 @@
 <meta name="_csrf_header" content="${_csrf.headerName}"/>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title><tiles:getAsString name="title" /></title>
-<link href="<c:url value='src/main/webapp/static/default/css/main.css' />"
+<link href="<c:url value='/resources/static/default/css/main.css' />"
 	rel="stylesheet"></link>
 <link rel="stylesheet" href="<s:theme code='stylesheet'/>"
 	type="text/css" />
 <link
-	href="<c:url value='/src/main/webapp/static/default/css/inc/font-awesome.min.css' />"
+	href="<c:url value='/static/default/css/inc/font-awesome.min.css' />"
 	rel="stylesheet"></link>
 <link
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
