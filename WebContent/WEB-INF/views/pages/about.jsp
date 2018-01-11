@@ -64,7 +64,7 @@
 					<section class="data">
 						<div class="bar-wrap">
 							<label>Photoshop</label>
-							<div class="bar blue" data-percentage="82"><span></span></div>
+							<div class="bar blue" data-percentage="72"><span></span></div>
 						</div>
 						<div class="bar-wrap">
 							<label>HTML 5</label>
@@ -94,30 +94,30 @@
 			<div class="info-box-1">
 				<div class="info-skills">
 					<div class="logo-img logo-spring">
-						<img src="<c:url value='/static/default/img/logo/spring-1.png' />" />
+						<img src="<c:url value='/resources/static/default/img/logo/spring-1.png' />" />
 					</div>
 					<div class="logo-img logo-jquery">
-						<img src="<c:url value='/static/default/img/logo/jquery-1.png' />" />
+						<img src="<c:url value='/resources/static/default/img/logo/jquery-1.png' />" />
 					</div>
 					<div class="logo-img logo-sass">
-						<img src="<c:url value='/static/default/img/logo/sass-1.png' />" />
+						<img src="<c:url value='/resources/static/default/img/logo/sass-1.png' />" />
 					</div>
 					<div class="logo-img logo-bootstrap">
-						<img src="<c:url value='/static/default/img/logo/bootstrap-1.png' />" />
+						<img src="<c:url value='/resources/static/default/img/logo/bootstrap-1.png' />" />
 					</div>
 				</div>
 				<div class="info-tools">
 					<div class="logo-img logo-eclipse">
-						<img src="<c:url value='/static/default/img/logo/eclipse.jpg' />" />
+						<img src="<c:url value='/resources/static/default/img/logo/eclipse.jpg' />" />
 					</div>
 					<div class="logo-img logo-intellij">
-						<img src="<c:url value='/static/default/img/logo/intellij.png' />" />
+						<img src="<c:url value='/resources/static/default/img/logo/intellij.png' />" />
 					</div>
 					<div class="logo-img logo-atom">
-						<img src="<c:url value='/static/default/img/logo/atom.png' />" />
+						<img src="<c:url value='/resources/static/default/img/logo/atom.png' />" />
 					</div>
 					<div class="logo-img logo-brackets">
-						<img src="<c:url value='/static/default/img/logo/brackets.png' />" />
+						<img src="<c:url value='/resources/static/default/img/logo/brackets.png' />" />
 					</div>
 				</div>
 			</div>
@@ -138,7 +138,8 @@
 		<div class="skype nav-elem"><a href="<c:url value='skype:nenad.nikolic357?add' />" target="_blank"><i class="fa fa-skype" aria-hidden="true"></i></a></div>
 		<div class="animation start-home"></div>
 	</div>
-
+	<script type="text/javascript"
+		src="<c:url value='/resources/static/default/js/lib/jquery-3.2.1.min.js' />"></script>
 	<script type="text/javascript"
 		src="<c:url value='/resources/static/default/js/lib/data.js' />"></script>
 	<script type="text/javascript"
