@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="<s:theme code='stylesheet'/>"
 	type="text/css" />
 <link
-	href="<c:url value='/static/default/css/inc/font-awesome.min.css' />"
+	href="<c:url value='/resources/static/default/css/inc/font-awesome.min.css' />"
 	rel="stylesheet"></link>
 <link
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
