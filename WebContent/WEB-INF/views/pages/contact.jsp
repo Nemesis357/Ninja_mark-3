@@ -89,6 +89,6 @@
 <%-- 	<script type="text/javascript" --%>
 <%-- 		src="<c:url value='/static/default/js/lib/jquery-3.2.1.min.js' />"></script> --%>
 	<script type="text/javascript"
-		src="<c:url value='/static/default/js/lib/submitButton.js' />"></script>
+		src="<c:url value='/resources/static/default/js/lib/submitButton.js' />"></script>
 </body>
 </html>

@@ -140,8 +140,8 @@
 	</div>
 
 	<script type="text/javascript"
-		src="<c:url value='/static/default/js/lib/data.js' />"></script>
+		src="<c:url value='/resources/static/default/js/lib/data.js' />"></script>
 	<script type="text/javascript"
-		src="<c:url value='/static/default/js/lib/imgRotate.js' />"></script>
+		src="<c:url value='/resources/static/default/js/lib/imgRotate.js' />"></script>
 </body>
 </html>
