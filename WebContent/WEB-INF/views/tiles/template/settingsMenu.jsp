@@ -24,9 +24,9 @@
 		</ul>
 		<p class="settingsMenuTitle"><s:message code="ninja.languageSelect" text="Select language" />:</p>
 		<ul>
-			<li class="hvr-bounce-to-top"><a href="?lang=en"><img src="<c:url value='/static/default/img/flag-england.png' />"><s:message code="ninja.languageEn"
+			<li class="hvr-bounce-to-top"><a href="?lang=en"><img src="<c:url value='/resources/static/default/img/flag-england.png' />"><s:message code="ninja.languageEn"
 						text="English" /></a></li>
-			<li class="hvr-bounce-to-top"><a href="?lang=sr"><img src="<c:url value='/static/default/img/flag-serbia.png' />"><s:message code="ninja.languageSr"
+			<li class="hvr-bounce-to-top"><a href="?lang=sr"><img src="<c:url value='/resources/static/default/img/flag-serbia.png' />"><s:message code="ninja.languageSr"
 						text="Serbian" /></a></li>
 		</ul>
 	</div>

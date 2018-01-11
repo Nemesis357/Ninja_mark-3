@@ -23,7 +23,7 @@
 
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
-					data-image="<c:url value="/static/default/img/projects/dentist.png" />"></div>
+					data-image="<c:url value="/resources/static/default/img/projects/dentist.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
 						<a href="https://www.goganikolic.com/" target="_blank"
@@ -34,7 +34,7 @@
 
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
-					data-image="<c:url value="/static/default/img/projects/restaurant.png" />"></div>
+					data-image="<c:url value="/resources/static/default/img/projects/restaurant.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
 						<a href="https://nemesis357.github.io/Mark-08/" target="_blank"
@@ -45,7 +45,7 @@
 
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
-					data-image="<c:url value="/static/default/img/projects/doctorCare.png" />"></div>
+					data-image="<c:url value="/resources/static/default/img/projects/doctorCare.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
 						<a href="https://nemesis357.github.io/Mark-2/index.html"
@@ -56,7 +56,7 @@
 
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
-					data-image="<c:url value="/static/default/img/projects/library.png" />"></div>
+					data-image="<c:url value="/resources/static/default/img/projects/library.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
 						<a href="https://nemesis357.github.io/Mark-3/" target="_blank"
@@ -67,7 +67,7 @@
 
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
-					data-image="<c:url value="/static/default/img/projects/yacht.png" />"></div>
+					data-image="<c:url value="/resources/static/default/img/projects/yacht.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
 						<a href="https://nemesis357.github.io/Mark-10/" target="_blank"
@@ -78,7 +78,7 @@
 
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
-					data-image="<c:url value="/static/default/img/projects/revision.png" />"></div>
+					data-image="<c:url value="/resources/static/default/img/projects/revision.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
 						<a href="https://nemesis357.github.io/Mark-5/#" target="_blank"
@@ -89,7 +89,7 @@
 
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
-					data-image="<c:url value="/static/default/img/projects/designmodo.png" />"></div>
+					data-image="<c:url value="/resources/static/default/img/projects/designmodo.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
 						<a href="https://nemesis357.github.io/Mark-09/" target="_blank"
@@ -100,7 +100,7 @@
 
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
-					data-image="<c:url value="/static/default/img/projects/portfolio_2.png" />"></div>
+					data-image="<c:url value="/resources/static/default/img/projects/portfolio_2.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
 						<a href="https://nemesis357.github.io/portfolio/" target="_blank"
@@ -111,7 +111,7 @@
 
 			<div class="tiles">
 				<div class="tile" data-scale="1.6"
-					data-image="<c:url value="/static/default/img/projects/portfolio_1.png" />"></div>
+					data-image="<c:url value="/resources/static/default/img/projects/portfolio_1.png" />"></div>
 				<div class="projects-box-2">
 					<div class="projectLink">
 						<a href="https://nemesis357.github.io/Mark-19/" target="_blank"
@@ -135,6 +135,8 @@
 
 	<%-- 	<script type="text/javascript" src="<c:url value='/static/default/js/lib/sketch.min.js' />"></script>  --%>
 	<%--  	<script type="text/javascript" src="<c:url value='/static/default/js/lib/dat.gui.min.js' />"></script>  --%>
+	<script type="text/javascript"
+		src="<c:url value='/resources/static/default/js/lib/jquery-3.2.1.min.js' />"></script>
 	<script type="text/javascript"
 		src="<c:url value='/resources/static/default/js/lib/zoom.js' />"></script>
 	<script type="text/javascript"

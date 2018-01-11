@@ -24,12 +24,12 @@
 	rel="stylesheet">
 	
 	<script type="text/javascript"
-		src="<c:url value='/static/default/js/lib/jquery-3.2.1.min.js' />"></script>
+		src="<c:url value='/resources/static/default/js/lib/jquery-3.2.1.min.js' />"></script>
 </head>
 <body>
 
 	<div id="loading">
-	  <img id="loading-image" src="<c:url value='/static/default/img/startUp/ajax-loader.gif' />" alt="Loading..." />
+	  <img id="loading-image" src="<c:url value='/resources/static/default/img/startUp/ajax-loader.gif' />" alt="Loading..." />
 	</div>
 
 	<div id="settingsMenu">
@@ -47,7 +47,7 @@
 		<tiles:insertAttribute name="socialMenu" />
 	</div>
 	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"
 		type="text/javascript"></script>
 	<script type="text/javascript" src="<c:url value='/resources/static/default/js/lib/jquery-3.2.1.min.js' />"></script>
 	<script type="text/javascript" src="<c:url value='/resources/static/default/js/app.js' />" ></script>
