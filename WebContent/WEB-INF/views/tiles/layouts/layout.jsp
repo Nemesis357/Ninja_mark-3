@@ -12,6 +12,7 @@
 <meta name="_csrf_header" content="${_csrf.headerName}"/>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title><tiles:getAsString name="title" /></title>
+<link rel="shortcut icon" type="image/x-icon" href="/resources/static/default/img/favicon.ico" />
 <link href="<c:url value='/resources/static/default/css/main.css' />"
 	rel="stylesheet"></link>
 <link rel="stylesheet" href="<s:theme code='stylesheet'/>"

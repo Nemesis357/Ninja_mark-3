@@ -60,10 +60,16 @@
 <!-- 						<i class="fa fa-check" aria-hidden="true"></i> -->
 					</button>
 					
-					<button id="listMessages" class="loadMes formButton">
-						<s:message code="ninja.listMessages" text="List Messages" />
-					</button>					
+									
 				</div>
+			</form:form>
+			<form:form action="/listMessages">
+<%-- 			<div>${_csrf.parameterName}</div> --%>
+<%-- 			<div>${_csrf.token}</div> --%>
+			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+				<button id="listMessages" class="loadMes formButton" type="submit">
+					<s:message code="ninja.listMessages" text="List Messages" />
+				</button>	
 			</form:form>
 		</div>
 	</div>

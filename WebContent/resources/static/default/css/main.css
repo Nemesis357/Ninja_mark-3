@@ -16,7 +16,7 @@
   left: 0;
   position: fixed;
   display: block;
-  opacity: 0.9;
+  opacity: 1;
   background-color: #000;
   z-index: 9999999;
   text-align: center;

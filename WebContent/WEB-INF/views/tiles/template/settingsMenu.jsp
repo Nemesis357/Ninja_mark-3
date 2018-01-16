@@ -18,9 +18,9 @@
 	<div id="settingsMenuInner">
 		<p class="settingsMenuTitle"><s:message code="ninja.themeSelect" text="Select theme" />:</p>
 		<ul>
-			<li class="rebelGalaxy hvr-bounce-to-bottom"><a href="?theme=rebelGalaxy"><i class="fa fa-space-shuttle" aria-hidden="true"></i>rebelGalaxy</a></li>
-			<li class="businessBoring hvr-bounce-to-bottom"><a href="?theme=businessBoring"><i class="fa fa-briefcase" aria-hidden="true"></i>businessBoring</a></li>
-			<li class="springNature hvr-bounce-to-bottom"><a href="?theme=springNature"><i class="fa fa-sun-o" aria-hidden="true"></i>springNature</a></li>
+			<li class="rebelGalaxy hvr-bounce-to-bottom <s:theme code='rebelGalaxyTheme'/>"><a href="?theme=rebelGalaxy"><i class="fa fa-space-shuttle" aria-hidden="true"></i>rebelGalaxy</a></li>
+			<li class="businessBoring hvr-bounce-to-bottom <s:theme code='businessBoringTheme'/>"><a href="?theme=businessBoring"><i class="fa fa-briefcase" aria-hidden="true"></i>businessBoring</a></li>
+			<li class="springNature hvr-bounce-to-bottom <s:theme code='springNatureTheme'/>"><a href="?theme=springNature"><i class="fa fa-sun-o" aria-hidden="true"></i>springNature</a></li>
 		</ul>
 		<p class="settingsMenuTitle"><s:message code="ninja.languageSelect" text="Select language" />:</p>
 		<ul>
