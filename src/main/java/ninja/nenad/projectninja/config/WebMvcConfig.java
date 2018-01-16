@@ -117,11 +117,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Bean
 	public JavaMailSender getJavaMailSender() {
 		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-	    mailSender.setHost("smtp.gmail.com");
+	    mailSender.setHost("smtp.nenadniko.com");
 	    mailSender.setPort(587);
 	    
-	    mailSender.setUsername("my.gmail@gmail.com");
-	    mailSender.setPassword("password");
+	    mailSender.setUsername("nenadniko.com");
+	    mailSender.setPassword("3579sunshine3579");
 	     
 //	    mailSender.setUsername("${spring.mail.username}");
 //	    mailSender.setPassword("${spring.mail.password}");

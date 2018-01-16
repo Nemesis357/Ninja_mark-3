@@ -225,7 +225,33 @@ body {
 	}
 }
 
+/* Share */
+.shareActivator {
+    border: 2px solid #00ff40;
+}
 
+.shareMenuSlider {
+	background-color: #00ff4080;
+}
+
+.shareActivator:hover {
+  background: #00ff4080;
+}
+
+@-webkit-keyframes sharePulse {
+  0% {
+    background: #00ff4080;
+    transform: scale(1.1);
+  }
+  50% {
+    background: rgba(0,0,0,0.5);
+    transform: scale(1);
+  }
+  100% {
+  	background: #00ff4080;
+    transform: scale(1.1);
+  }
+}
 
 
 /* RESPONSIVE */

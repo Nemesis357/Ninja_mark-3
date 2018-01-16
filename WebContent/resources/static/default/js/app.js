@@ -1,5 +1,16 @@
 $(document).ready(function() {
 	
+	//	Close menus when clicked outside
+	$(document).on('click', function() {
+		if ($(".shareMenuSlider").hasClass("shareMenuSliderActive")) {
+			$(".shareActivator").click();
+		}
+		if ($("#settingsMenu").hasClass("active")) {
+			$("#settingsMenuToggle > i").click();
+		}
+	})
+	
+	
 	// Startup Animation
 	$(".springAnim").addClass("animated");
 	
@@ -46,20 +57,35 @@ $(document).ready(function() {
 	
 
 	// Settings Menu Logic
-	$(document).on('click', '#settingsMenuToggle > i', function() {
+	$(document).on('click', '#settingsMenuToggle > i', function(e) {
+		e.stopPropagation();
 		$("#settingsMenuToggle").toggleClass("active");
 		$("#settingsMenu").toggleClass("active");
 	})
 
 	// Social Menu Logic
-	var button = document.querySelector('.triggerSocial'), items = document
-			.querySelectorAll('li');
-	var openCloseMenu = function() {
-		for (i = 0; i < items.length; i++) {
-			items[i].classList.toggle('slideout');
+	$(document).on('click', '.shareActivator', function(e) {
+		e.stopPropagation();
+		var menu = $(".shareMenuSlider");
+		
+		if (menu.hasClass("shareMenuSliderActive")) {
+			console.log("removing");
+			menu.removeClass("shareMenuSliderActive");
+			$(this).removeClass("activatorActive");
+		} else {
+			console.log("adding");
+			menu.addClass("shareMenuSliderActive");
+			$(this).addClass("activatorActive");
 		}
-	}
-	button.onclick = openCloseMenu;
+	})
+//	var button = document.querySelector('.triggerSocial'), items = document
+//			.querySelectorAll('li');
+//	var openCloseMenu = function() {
+//		for (i = 0; i < items.length; i++) {
+//			items[i].classList.toggle('slideout');
+//		}
+//	}
+//	button.onclick = openCloseMenu;
 
 
 	

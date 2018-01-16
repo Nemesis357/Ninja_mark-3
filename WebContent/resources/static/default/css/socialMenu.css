@@ -1,104 +1,50 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700);
-@font-face {
-  font-family: 'icomoon';
-  src: url("https://s.cdpn.io/9674/icomoon.eot");
-  src: url("https://s.cdpn.io/9674/icomoon.eot?#iefix") format("embedded-opentype"), url("https://s.cdpn.io/9674/icomoon.woff") format("woff"), url("https://s.cdpn.io/9674/icomoon.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 #socialMenu {
   position: fixed;
-  left: 10px;
-  bottom: 10px;
+  left: 0;
+  bottom: 0;
   z-index: 99999;
 }
-#socialMenu .icon-share, #socialMenu .icon-twitter, #socialMenu .icon-facebook, #socialMenu .icon-google-plus, #socialMenu .icon-reddit, #socialMenu button {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  color: white;
-  display: block;
-  font-size: 1.5em;
-  width: 100%;
-  height: 100%;
-  line-height: 2em;
-  border-radius: 50%;
+
+.shareMenuSlider {
+  padding: 20px 40px;
+  position: relative;
+  border-radius: 0 20px 0 0;
+  box-shadow: inset 0 0 10px 0px #4e4e4e;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-end;
+  bottom: -68px;
+  transition: all 0.5s;
 }
-#socialMenu .icon-share:before {
-  content: "\e000";
+
+.shareMenuSliderActive {
+  bottom: 0 !important;
 }
-#socialMenu .icon-twitter {
-  background-color: #00ACEE;
+
+.shareBtn:not(:last-child) {
+  margin-right: 10px;
 }
-#socialMenu .icon-twitter:before {
-  content: "\e001";
-}
-#socialMenu .icon-facebook {
-  background-color: #3C5A98;
-}
-#socialMenu .icon-facebook:before {
-  content: "\e002";
-}
-#socialMenu .icon-google-plus {
-  background-color: #B73223;
-}
-#socialMenu .icon-google-plus:before {
-  content: "\e003";
-}
-#socialMenu .icon-reddit {
-  background-color: #A5ADAF;
-}
-#socialMenu .icon-reddit:before {
-  content: "\e004";
-}
-#socialMenu a {
-  color: deepPink;
-  text-decoration: none;
-  font-weight: bold;
-}
-#socialMenu .container {
-  overflow: hidden;
-  width: 80%;
-  margin: 0 auto;
-}
-#socialMenu button,
-#socialMenu li {
-  border-radius: 50%;
-  text-align: center;
-  width: 3em;
-  height: 3em;
+
+.shareActivator {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
-  border: none;
-}
-#socialMenu button {
-  outline: none;
-  background-color: #111;
-  z-index: 5;
+  top: -70px;
+  left: 10px;
+  transform: scale(1);
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  transition: all 1s ease;
   cursor: pointer;
-  font-size: 1em;
 }
-#socialMenu li.slideout:nth-child(1) {
-  -webkit-transform: translateY(-10em);
-  transform: translateY(-10em);
+.shareActivator:hover {
+  transform: scale(1.1);
 }
-#socialMenu li.slideout:nth-child(2) {
-  -webkit-transform: translateY(-8.66025em) translateX(5em);
-  transform: translateY(-8.66025em) translateX(5em);
-}
-#socialMenu li.slideout:nth-child(3) {
-  -webkit-transform: translateY(-5em) translateX(8.66025em);
-  transform: translateY(-5em) translateX(8.66025em);
-}
-#socialMenu li.slideout:nth-child(4) {
-  -webkit-transform: translateX(10em);
-  transform: translateX(10em);
+
+.activatorActive {
+  animation: sharePulse 1s infinite;
 }
