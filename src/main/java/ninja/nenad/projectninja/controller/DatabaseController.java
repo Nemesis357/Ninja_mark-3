@@ -32,7 +32,7 @@ public class DatabaseController {
 	@JsonView(Views.Public.class)
 	@RequestMapping(value = "/submit")
 	public @ResponseBody AjaxResponseBody submitCtrl(@RequestBody NinjaDatabase ninjaRequest) {
-		// System.out.println("Submiting: " + new Date().toString());
+		System.out.println("Submiting: " + new Date().toString());
 
 		NinjaDao ninjaConn = new NinjaDaoImpl();
 

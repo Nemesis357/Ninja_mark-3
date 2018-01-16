@@ -2,7 +2,6 @@ package ninja.nenad.projectninja.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -16,20 +15,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	    protected void configure(HttpSecurity http) throws Exception {
 	        http
 	            .authorizeRequests()
-	                .antMatchers("/listMessages").authenticated()
+	                .antMatchers("/listMessages").access("hasRole('ADMIN')")
 	                .anyRequest().permitAll()
 	                .and()
 	            .formLogin()
 	                .loginPage("/login")
 	                .defaultSuccessUrl("/contact")
 	                .failureUrl("/shutdown")
-	                .permitAll()
+//	                .permitAll()
 	                .usernameParameter("username").passwordParameter("password")	
 	                .and()
 	            .logout()
-	                .permitAll();
-//	                .and()
-//	            .csrf().disable();
+	                .permitAll()
+	                .and()
+	            .csrf().disable();
 	    }
 
 	 
@@ -37,6 +36,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 	        auth
 	            .inMemoryAuthentication()
-	                .withUser("user").password("pass").roles("ADMIN");
+	                .withUser("user").password("{noop}pass").roles("ADMIN");
 	    }
 }

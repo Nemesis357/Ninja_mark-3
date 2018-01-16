@@ -33,14 +33,14 @@
 					<s:message code="ninja.username" text="Username" />
 				</label>
 				<span class="input-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
-				<input type="text" name="username" />
+				<input type="text" name="username" value=''/>
 			</div>
 			<div class="loginFormField">
 				<label path="password">
 					<s:message code="ninja.password" text="Password" />
 				</label>
 				<span class="input-icon"><i class="fa fa-key" aria-hidden="true"></i></span>
-				<input type="text" name="password" />
+				<input type="password" name="password" />
 			</div>
 			<div class="loginFormField">
 				<button id="loginBtn" class="submit formButton" type="submit">

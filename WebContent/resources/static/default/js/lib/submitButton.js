@@ -110,7 +110,7 @@ $(document).ready(function() {
 	    
 	    var self = this;
 	    var form = $('#submitForm');
-	    var url = '/project-ninja-mk-1/submit';
+	    var url = '/submit';
 	    var data = $("#submitForm").serializeArray();
 	    var readyData = JSON.stringify({"name" : data[0].value, "company" : data[1].value, "email" : data[2].value, "message" : data[3].value});
 	    
@@ -158,12 +158,63 @@ $(document).ready(function() {
 	    
 	});
 	
-	
+	// List button logic
+	$(document).on('click', '#listMessages' ,function(e){
+		e.preventDefault();
+		$(this).addClass("stand-by");
+		$(this).text("Sending");
+		var self = this;
+	    
+	    var url = '/listMessages';
+
+	    console.log("1");
+	    
+	    $.ajax({
+	    	headers: { 
+	            'Accept': 'application/json',
+	            'Content-Type': 'application/json' 
+	        },
+	        type: 'POST',
+	        url: url,
+	        async: true,
+	        cache: false,
+	        processData: true,
+	        contentType: 'application/json',
+	        success: function (data) {
+	        	$("#listMessages").addClass("sent").removeClass("stand-by");
+	        	
+	        	$("#listMessages").text("Listed: ").append("<span class='listedLength'>" + data.length + "</span><i class='fa fa-check' aria-hidden='true'></i>");
+//	        	$("#listMessages").append("<span class='listedLength'>" + data.length + "</span>");
+	        	
+	        	
+	        	$("#site-content").append("<div class='ninjaList'> <div class='ninjaContainer'>");
+	        	
+	        	for (i = 0; i < data.length; i++ ) {
+	        		renderData(data[i].id, data[i].name, data[i].company, data[i].email, data[i].message);
+	        	}
+	        	
+	        	$("#site-content").append("</div> </div>");
+	        	
+	        },
+	        error: function(data) {
+	        	$("#listMessages").addClass("error").removeClass("stand-by");
+	        	$("#listMessages").text("Error").append("<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>");
+	        	console.log("Failed");
+	        	console.log(data);
+	        	setTimeout( function(){ 
+	        		$("#listMessages").removeClass("error sent stand-by");
+	        		$("#listMessages").text("Try again");
+	        		$("#listMessages i").remove();
+	        	  }  , 3000 );
+	        },
+	    });
+	    
+	});
 	
 	// Delete button logic
 	$(document).on('click', '.ninjaDelete' ,function(e){
 		
-	    var url = '/project-ninja/ninjaDelete';
+	    var url = '/ninjaDelete';
 	    var readyData = JSON.stringify({"id" : $(this).data('ref')});
 	    $(this).parent().addClass("deletedNinja");
 	    
