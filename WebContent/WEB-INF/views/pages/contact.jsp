@@ -5,6 +5,8 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ page import="java.sql.*" %> 
+<%@ page import="java.io.*" %> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,6 +16,32 @@
 </head>
 <body>
 	<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+<!-- Class.forName("com.mysql.jdbc.Driver").newInstance(); -->
+<!-- java.sql.Connection conn; -->
+<!-- conn = DriverManager.getConnection( -->
+<!--  "jdbc:mysql://localhost:3306/dbname?user=blah&password=blah"); -->
+
+<!-- jdbc:mysql://localhost:3306/nenadnik_ninja_database?user=nenadnik_admin&password=3579sunshine3579 -->
+<!-- jdbc:mysql://localhost:3306/ninja_database?user=dev-user&password=admin -->
+<% 
+try {
+    String connectionURL = "jdbc:mysql://localhost:3306/nenadnik_ninja_database?user=nenadnik_admin&password=3579sunshine3579";
+    Connection connection = null; 
+    Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); 
+    connection = DriverManager.getConnection(connectionURL);
+    if(!connection.isClosed()) {
+         System.out.println("Successfully connected to " + "MySQL server using TCP/IP...");
+         
+         %> <div class="connectionStatus connectionSuccess">Successfully connected to MySQL server using TCP/IP...</div> <%
+         
+    }
+    connection.close();
+}catch(Exception ex){
+	System.out.println("Unable to connect to database.");
+	 %> <div class="connectionStatus connectionError">Unable to connect to database.</div> <%
+}
+%>
+
 
 	<div id="bodyBackground">
 		<s:theme code='contactBackground'/>
@@ -60,19 +88,25 @@
 <!-- 						<i class="fa fa-check" aria-hidden="true"></i> -->
 					</button>
 					
-					<button id="listMessages" class="loadMes formButton">
-						<s:message code="ninja.listMessages" text="List Messages" />
-					</button>
+					<c:if test="${pageContext.request.userPrincipal.name == null}">
+						<a class="loadMes formButton" href="/login">Log in to see messages</a>
+					</c:if>
+					
+					<c:if test="${pageContext.request.userPrincipal.name != null}">
+						<button id="listMessages" class="loadMes formButton">
+							<s:message code="ninja.listMessages" text="List Messages" />
+						</button>
+					</c:if>
 				</div>
 			</form:form>
-			<form:form action="/project-ninja-mk-1/listMessages">
+<%-- 			<form:form action="/project-ninja-mk-1/listMessages"> --%>
 <%-- 			<div>${_csrf.parameterName}</div> --%>
 <%-- 			<div>${_csrf.token}</div> --%>
-				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-				<button  class="loadMes formButton" type="submit">
-					<s:message code="ninja.listMessages" text="List Messages" />
-				</button>	
-			</form:form>
+<%-- 				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> --%>
+<!-- 				<button  class="loadMes formButton" type="submit"> -->
+<%-- 					<s:message code="ninja.listMessages" text="List Messages" /> --%>
+<!-- 				</button>	 -->
+<%-- 			</form:form> --%>
 		</div>
 	</div>
 <%-- 	<div>Name: ${name}</div> --%>

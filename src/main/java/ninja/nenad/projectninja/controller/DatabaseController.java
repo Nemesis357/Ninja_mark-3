@@ -51,37 +51,38 @@ public class DatabaseController {
 
 			System.out.println("Insert complete: " + ninjaBool);
 			
-			String recipientAddress = "nenadn89@gmail.com";
-
-			String emailName = ninjaRequest.getName();
-			String emailCompany = ninjaRequest.getCompany();
-			String emailEmail = ninjaRequest.getEmail();
-			String emailMessage = ninjaRequest.getMessage();
-
-			// prints debug info
-			System.out.println("Name: " + emailName);
-			System.out.println("Company: " + emailCompany);
-			System.out.println("Email: " + emailEmail);
-			System.out.println("Message: " + emailMessage);
-
-			// creates a simple e-mail object
-			SimpleMailMessage email = new SimpleMailMessage();
-			email.setTo("recipientAddress");
-			email.setSubject("Ninja Email");
+//			String recipientAddress = "contact@nenadniko.com";
+//
+//			String emailName = ninjaRequest.getName();
+//			String emailCompany = ninjaRequest.getCompany();
+//			String emailEmail = ninjaRequest.getEmail();
+//			String emailMessage = ninjaRequest.getMessage();
+//
+//			// prints debug info
+//			System.out.println("Name: " + emailName);
+//			System.out.println("Company: " + emailCompany);
+//			System.out.println("Email: " + emailEmail);
+//			System.out.println("Message: " + emailMessage);
+//
+//			// creates a simple e-mail object
+//			SimpleMailMessage email = new SimpleMailMessage();
+//			email.setTo(recipientAddress);
+//			email.setSubject("Ninja Email");
 //			email.setReplyTo(emailEmail);
 //			email.setFrom(emailName + " " + emailCompany);
-			email.setText("emailMessage");
-
-			System.out.println("Before sending...");
-			// sends the e-mail
-			mailSender.send(email);
-
-			System.out.println("After sending...");
+//			email.setText("emailMessage");
+//
+//			System.out.println("Before sending...");
+//			// sends the e-mail
+//			mailSender.send(email);
+//
+//			System.out.println("After sending...");
 
 			return result;
 		} catch (Exception e) {
 			// e.printStackTrace();
 			System.out.println("Submit failed!!!");
+			return null;
 		}
 
 		// Email
@@ -89,8 +90,6 @@ public class DatabaseController {
 		// String recipientAddress = request.getParameter("recipient");
 		// String subject = request.getParameter("subject");
 		// String message = request.getParameter("message");
-
-		return result;
 	}
 
 	@JsonView(Views.Public.class)
@@ -116,7 +115,7 @@ public class DatabaseController {
 			return newList;
 		} catch (Exception e) {
 			// e.printStackTrace();
-			System.out.println("Submit failed!!!");
+			System.out.println("List Messages failed!!!");
 			return null;
 		}
 	}
@@ -148,7 +147,7 @@ public class DatabaseController {
 			return isDeleted;
 		} catch (Exception e) {
 			// e.printStackTrace();
-			// System.out.println("Submit failed!!!");
+			 System.out.println("Delete failed!!!");
 			return false;
 		}
 	}

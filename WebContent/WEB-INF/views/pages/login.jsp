@@ -7,6 +7,7 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="_csrf" content="${_csrf.token}"/>
 <meta name="_csrf_header" content="${_csrf.headerName}"/>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -43,11 +44,20 @@
 				<input type="password" name="password" />
 			</div>
 			<div class="loginFormField">
+				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 				<button id="loginBtn" class="submit formButton" type="submit">
 					<s:message code="ninja.login" text="Login" />
 				</button>
 			</div>
 		</form>
+		
+		<c:if test="${pageContext.request.userPrincipal.name != null}">
+			<c:url value="/logout" var="logoutUrl" />
+			<form id="logout" action="${logoutUrl}" method="post" >
+			  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+			  <input type="submit" value="Logout" />
+			</form>
+		</c:if>
 	</div>
 </div>
 

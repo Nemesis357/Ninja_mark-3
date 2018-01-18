@@ -200,6 +200,7 @@ console.log("1");
 	        	$("#listMessages").addClass("error").removeClass("stand-by");
 	        	$("#listMessages").text("Error").append("<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>");
 	        	console.log("Failed");
+	        	console.log(data);
 	        	setTimeout( function(){ 
 	        		$("#listMessages").removeClass("error sent stand-by");
 	        		$("#listMessages").text("Try again");

@@ -34,6 +34,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tomcat-dbcp-7.0.30.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

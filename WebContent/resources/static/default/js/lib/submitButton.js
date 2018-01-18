@@ -132,7 +132,7 @@ $(document).ready(function() {
 	        	$("#submit").text("Sent").append("<i class='fa fa-check' aria-hidden='true'></i>");
 	        	$("#formWindow input, #formWindow textarea").val("");
 	        	$("#submitForm label").removeClass("label-move");
-	        	
+	        	console.log(response);
 	        	setTimeout( function(){ 
 	        		$("#submit").removeClass("error sent stand-by");
 	        		$("#submit").text("Submit");
@@ -150,7 +150,7 @@ $(document).ready(function() {
 	        	
 	        	setTimeout( function(){ 
 	        		$("#submit").removeClass("error sent stand-by");
-	        		$("#submit").text("Try again");
+	        		$("#submit").text("Error");
 	        		$("#submit i").remove();
 	        	  }  , 3000 );
 	        },
@@ -170,12 +170,15 @@ $(document).ready(function() {
 	    console.log("1");
 	    
 	    $.ajax({
-	    	headers: { 
-	            'Accept': 'application/json',
-	            'Content-Type': 'application/json' 
-	        },
+//	    	beforeSend: function (xhr) {xhr.setRequestHeader('Content-Type', 'application/json');},
+//	    	headers: { 
+//	            'Accept': 'application/json',
+//	            'Content-Type': 'application/json' 
+//	        },
+//	    	headers: {'X-Requested-With': 'XMLHttpRequest'},
 	        type: 'POST',
 	        url: url,
+//	        dataType: 'jsonp',
 	        async: true,
 	        cache: false,
 	        processData: true,
@@ -194,7 +197,7 @@ $(document).ready(function() {
 	        	}
 	        	
 	        	$("#site-content").append("</div> </div>");
-	        	
+	        	console.log(data);
 	        },
 	        error: function(data) {
 	        	$("#listMessages").addClass("error").removeClass("stand-by");
