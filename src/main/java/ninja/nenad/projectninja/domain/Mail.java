@@ -9,10 +9,10 @@ public class Mail {
 	
     public Mail () {}
     
-    public Mail(String from, String to, String company, String email, String message) {
+    public Mail(String from, String company, String email, String message) {
 		super();
 		this.from = from;
-		this.to = to;
+		this.to = "contact@nenadniko.com";
 		this.company = company;
 		this.email = email;
 		this.message = message;

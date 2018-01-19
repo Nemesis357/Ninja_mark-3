@@ -119,7 +119,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
 	    mailSender.setHost("mail.nenadniko.com");
 	    mailSender.setPort(587);
-	    mailSender.setUsername("nenadniko.com");
+	    mailSender.setUsername("contact@nenadniko.com");
 	    mailSender.setPassword("3579sunshine3579");
 	     
 	    Properties props = mailSender.getJavaMailProperties();
@@ -127,9 +127,34 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	    props.put("mail.smtp.auth", "true");
 	    props.put("mail.smtp.starttls.enable", "true");
 	    props.put("mail.debug", "true");
+	    
+//	    Session mailSession = Session.getDefaultInstance(properties, new Authenticator() {
+//	        public PasswordAuthentication getPasswordAuthentication() {
+//	           //Fill in your data here.
+//	           return new PasswordAuthentication("user", "password");
+//	        }
+//	    });
+	    
 	     
 	    return mailSender;
 	}
+	
+//	@Bean
+//    public Session getSession() {
+//        log.debug("Creating javax.mail.Session with TLS enabled.");
+//        // We could be more flexible and have auth based on whether there's a username and starttls based on a property.
+//        Properties p = new Properties();
+//        p.setProperty("mail.smtp.auth", "true");
+//        p.setProperty("mail.smtp.starttls.enable", "true");
+//        p.setProperty("mail.smtp.host", mailProperties.getHost());
+//        p.setProperty("mail.smtp.port", mailProperties.getPort().toString());
+//        return Session.getDefaultInstance(p, new Authenticator() {
+//            @Override
+//            protected PasswordAuthentication getPasswordAuthentication() {
+//                return new PasswordAuthentication(mailProperties.getUsername(), mailProperties.getPassword());
+//            }
+//        });
+//    }
 
 	@Bean
 	public MessageSource messageSource() {

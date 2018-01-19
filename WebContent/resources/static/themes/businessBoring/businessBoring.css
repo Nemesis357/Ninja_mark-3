@@ -69,9 +69,7 @@ body {
     left: 30%;
     transform: translate(-50%, -50%);
     min-width: 600px;
-    //background: url("img/tablet_3.png") no-repeat top left;
     background-color: #2a2529;
-    background-size: 100% 100%;
     padding: 67px 35px 69px 36px;
     color: #ada793;
 }
@@ -244,11 +242,11 @@ body {
 @media only screen and (max-width: 1280px) {
 	/* 	Contact */
 	#formWindow .formContainer {
-		padding: 30px 25px 30px 25px;
+		padding: 55px 25px 30px 25px;
 		min-width: 550px;
 	}
 	#formWindow .formContainer h2 {
-		font-size: 25px;
+		font-size: 20px;
 	}
 	#formWindow #submitForm .formField{
 		margin-bottom: 10px;
@@ -257,7 +255,7 @@ body {
 		font-size: 13px;
 	}
 	#formWindow #submitForm .formField input:not([type=submit]), #formWindow #submitForm .formField textarea {
-		padding: 6px 15px;
+		padding: 8px 15px;
 	}
 	#submitForm .formButton{
 		font-size: 0.8rem;
@@ -266,10 +264,9 @@ body {
 
 @media only screen and (max-width: 1024px) {
 	#formWindow .formContainer {
-		left: 50%;
-	    width: 90%;
-	    top: 40%;
-	    min-height: 50%;
+		left: 40%;
+	    width: 60%;
+	    top: 50%;
 	}
 	
 	#homeScreen .homeTitle {
