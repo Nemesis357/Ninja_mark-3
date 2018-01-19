@@ -24,22 +24,18 @@
 <!-- jdbc:mysql://localhost:3306/nenadnik_ninja_database?user=nenadnik_admin&password=3579sunshine3579 -->
 <!-- jdbc:mysql://localhost:3306/ninja_database?user=dev-user&password=admin -->
 <% 
-try {
-    String connectionURL = "jdbc:mysql://localhost:3306/nenadnik_ninja_database?user=nenadnik_admin&password=3579sunshine3579";
-    Connection connection = null; 
-    Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); 
-    connection = DriverManager.getConnection(connectionURL);
-    if(!connection.isClosed()) {
-         System.out.println("Successfully connected to " + "MySQL server using TCP/IP...");
-         
-         %> <div class="connectionStatus connectionSuccess">Successfully connected to MySQL server using TCP/IP...</div> <%
-         
-    }
-    connection.close();
-}catch(Exception ex){
-	System.out.println("Unable to connect to database.");
-	 %> <div class="connectionStatus connectionError">Unable to connect to database.</div> <%
-}
+// try {
+//     String connectionURL = "jdbc:mysql://localhost:3306/nenadnik_ninja_database?user=nenadnik_admin&password=3579sunshine3579";
+//     Connection connection = null; 
+//     Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); 
+//     connection = DriverManager.getConnection(connectionURL);
+//     if(!connection.isClosed()) {
+//          System.out.println("Successfully connected to " + "MySQL server using TCP/IP...");
+//     }
+//     connection.close();
+// }catch(Exception ex){
+// 	System.out.println("Unable to connect to database.");
+// }
 %>
 
 

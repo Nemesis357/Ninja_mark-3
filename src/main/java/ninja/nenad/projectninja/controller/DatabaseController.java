@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,7 +18,9 @@ import jsonview.Views;
 import model.AjaxResponseBody;
 import ninja.nenad.projectninja.dao.NinjaDao;
 import ninja.nenad.projectninja.daoImpl.NinjaDaoImpl;
+import ninja.nenad.projectninja.domain.Mail;
 import ninja.nenad.projectninja.domain.NinjaDatabase;
+import ninja.nenad.projectninja.service.EmailService;
 
 @Controller
 // @SessionAttributes
@@ -28,6 +29,8 @@ public class DatabaseController {
 	private DataSource dataSource;
 	@Autowired
 	private JavaMailSender mailSender;
+	 @Autowired
+	 private EmailService emailService;
 
 	@JsonView(Views.Public.class)
 	@RequestMapping(value = "/submit")
@@ -35,6 +38,7 @@ public class DatabaseController {
 		System.out.println("Submiting: " + new Date().toString());
 
 		NinjaDao ninjaConn = new NinjaDaoImpl();
+		
 
 		AjaxResponseBody result = new AjaxResponseBody();
 		result.setName(ninjaRequest.getName());
@@ -44,12 +48,19 @@ public class DatabaseController {
 		//
 		try {
 
+			Mail mail = new Mail(ninjaRequest.getName(), ninjaRequest.getCompany(), ninjaRequest.getEmail(), ninjaRequest.getMessage());
 			
+			System.out.println(mail);
+			
+			emailService.sendSimpleMessage(mail);
 			
 			ninjaConn.setDataSource(dataSource);
 			boolean ninjaBool = ninjaConn.create(ninjaRequest);
 
 			System.out.println("Insert complete: " + ninjaBool);
+			
+			
+			
 			
 //			String recipientAddress = "contact@nenadniko.com";
 //
