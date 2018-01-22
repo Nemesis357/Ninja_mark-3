@@ -264,9 +264,10 @@ body {
 
 @media only screen and (max-width: 1024px) {
 	#formWindow .formContainer {
-		left: 40%;
-	    width: 60%;
-	    top: 50%;
+		left: 50%;
+	    width: 90%;
+	    top: 40%;
+	    min-height: 50%;
 	}
 	
 	#homeScreen .homeTitle {
@@ -289,10 +290,10 @@ body {
 
 @media only screen and (max-width: 768px) {
 	#homeScreen .homeTitle h1 {
-	    font-size: 30px;
+	    font-size: 55px;
 	}
 	#homeScreen .homeTitle h2 {
-	    font-size: 22px;
+	    font-size: 40px;
 	}
 	#site-content .aboutContainerFlex .aboutHeading:after {
 		right: 0;
@@ -313,8 +314,23 @@ body {
 	.aboutContainerFlex .about_section_1 .activeImage {left: 30px; bottom: 30px;}
 }
 
-
-
+@media only screen and (max-width: 500px) {
+	#homeScreen .homeTitle h1 {
+	    font-size: 30px;
+	}
+	#homeScreen .homeTitle h2 {
+	    font-size: 22px;
+	}
+	#bodyBackground {z-index: -3;}
+	#formWindow .formContainer {
+		left: 10px;
+	    right: 10px;
+	    transform: initial;
+	    width: initial;
+	    top: 80px;
+	    padding-bottom: 100px;
+	}
+}
 
 
 

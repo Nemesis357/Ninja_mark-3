@@ -85,7 +85,7 @@
 					</button>
 					
 					<c:if test="${pageContext.request.userPrincipal.name == null}">
-						<a class="loadMes formButton" href="/login">Log in to see messages</a>
+						<a class="loadMes formButton" href="/project-ninja-mk-1/login">Log in to see messages</a>
 					</c:if>
 					
 					<c:if test="${pageContext.request.userPrincipal.name != null}">

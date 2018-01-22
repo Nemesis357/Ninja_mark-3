@@ -209,6 +209,23 @@
 }
 
 /* RESPONSIVE */
+@media only screen and (max-width: 1280px) {
+  #settingsMenuToggle {
+    font-size: 30px;
+  }
+
+  #settingsMenu .settingsMenuTitle {
+    font-size: 14px;
+  }
+
+  #settingsMenuInner {
+    font-size: 12px;
+  }
+
+  #settingsMenuInner ul li a {
+    padding: 6px 0;
+  }
+}
 @media only screen and (max-width: 768px) {
   #settingsMenuInner {
     background: rgba(0, 0, 0, 0.8);
