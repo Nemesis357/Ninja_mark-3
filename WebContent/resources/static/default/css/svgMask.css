@@ -38,6 +38,12 @@ svg #base {
   mask: url(#mask);
 }
 
+@media only screen and (max-width: 1280px) {
+	#homeScreen .homeTitle {
+		top: 30%;
+	}
+}
+
 /*@keyframes alpha {
   50%{fill: #000;}
 }*/

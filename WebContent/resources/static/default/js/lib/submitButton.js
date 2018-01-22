@@ -217,7 +217,7 @@ $(document).ready(function() {
 	// Delete button logic
 	$(document).on('click', '.ninjaDelete' ,function(e){
 		
-	    var url = '/ninjaDelete';
+	    var url = '/project-ninja-mk-1/ninjaDelete';
 	    var readyData = JSON.stringify({"id" : $(this).data('ref')});
 	    $(this).parent().addClass("deletedNinja");
 	    

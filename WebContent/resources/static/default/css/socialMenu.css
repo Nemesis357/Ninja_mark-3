@@ -30,7 +30,7 @@
 
 .shareActivator {
   position: absolute;
-  top: -70px;
+  top: -80px;
   left: 10px;
   transform: scale(1);
   padding: 15px;
@@ -47,4 +47,26 @@
 
 .activatorActive {
   animation: sharePulse 1s infinite;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .shareMenuSlider {
+    flex-wrap: wrap;
+    bottom: -116px;
+  }
+
+  .shareBtn:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .shareActivator {
+    position: fixed;
+    bottom: 20px;
+    top: initial;
+  }
+
+  .activatorActive {
+    bottom: 135px !important;
+  }
 }
