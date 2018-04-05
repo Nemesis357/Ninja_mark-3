@@ -72,14 +72,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Autowired
 	private Environment env;
 
-<<<<<<< HEAD
-=======
 	// @Bean
 	// public static PropertySourcesPlaceholderConfigurer
 	// propertySourcesPlaceholderConfigurer() {
 	// return new PropertySourcesPlaceholderConfigurer();
 	// }
->>>>>>> 7088720c3591da1893de70276853843c88f368dc
 
 	@Bean
 	public JdbcTemplate jdbcTemplate() {
@@ -95,14 +92,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		ds.setDriverClassName(DB_DRIVER);
 		ds.setUrl(DB_URL);
 
-<<<<<<< HEAD
-=======
 		// ds.setUsername(env.getProperty("jdbc.username"));
 		// ds.setPassword(env.getProperty("jdbc.password"));
 		// ds.setDriverClassName(env.getProperty("jdbc.driverClassName"));
 		// ds.setUrl(env.getProperty("jdbc.url"));
 
->>>>>>> 7088720c3591da1893de70276853843c88f368dc
 		return ds;
 	}
 
@@ -111,8 +105,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		return new PropertySourcesPlaceholderConfigurer();
 	}
 
-<<<<<<< HEAD
-=======
 	// @Bean
 	// public NinjaDao getNinjaDao() {
 	// NinjaDao ninja = new NinjaDaoImpl();
@@ -121,7 +113,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	// return ninja;
 	// }
 	
->>>>>>> 7088720c3591da1893de70276853843c88f368dc
 	// Email sending service
 	@Bean
 	public JavaMailSender getJavaMailSender() {
@@ -137,11 +128,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	    props.put("mail.smtp.starttls.enable", "true");
 	    props.put("mail.debug", "true");
 	    
-<<<<<<< HEAD
-	    return mailSender;
-	}
-	
-=======
 //	    Session mailSession = Session.getDefaultInstance(properties, new Authenticator() {
 //	        public PasswordAuthentication getPasswordAuthentication() {
 //	           //Fill in your data here.
@@ -170,7 +156,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 //        });
 //    }
 
->>>>>>> 7088720c3591da1893de70276853843c88f368dc
 	@Bean
 	public MessageSource messageSource() {
 		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
@@ -210,8 +195,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		return rmhm;
 	}
 
-<<<<<<< HEAD
-=======
 	// @Bean
 	// public TilesViewResolver tilesViewResolver() {
 	// TilesViewResolver tilesViewResolver = new TilesViewResolver();
@@ -219,7 +202,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	// return tilesViewResolver;
 	// }
 
->>>>>>> 7088720c3591da1893de70276853843c88f368dc
 	@Bean
 	public UrlBasedViewResolver urlBasedViewResolver() {
 		UrlBasedViewResolver resolver = new UrlBasedViewResolver();
@@ -243,8 +225,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		registry.addViewController("/").setViewName("home");
 	}
 
-<<<<<<< HEAD
-=======
 	// @Bean
 	// public DefaultAnnotationHandlerMapping defaultAnnotationHandlerMapping(){
 	// DefaultAnnotationHandlerMapping bean = new DefaultAnnotationHandlerMapping();
@@ -252,7 +232,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	// return bean;
 	// }
 
->>>>>>> 7088720c3591da1893de70276853843c88f368dc
 	/**
 	 * Configure ViewResolvers to deliver preferred views.
 	 */
@@ -274,10 +253,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
-=======
 //		WebMvcConfigurer.super.configureDefaultServletHandling(configurer);
->>>>>>> 7088720c3591da1893de70276853843c88f368dc
 		configurer.enable();
 	}
 
@@ -285,10 +261,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Bean
 	public ResourceBundleThemeSource themeSource() {
 		ResourceBundleThemeSource themeSource = new ResourceBundleThemeSource();
-<<<<<<< HEAD
-=======
 		// themeSource.setDefaultEncoding("UTF-8");
->>>>>>> 7088720c3591da1893de70276853843c88f368dc
 		themeSource.setBasenamePrefix("properties/theme-");
 		return themeSource;
 	}
@@ -306,18 +279,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		resolver.setCookieMaxAge(2400);
 		resolver.setCookieName("mythemecookie");
 		resolver.setDefaultThemeName("businessBoring");
-<<<<<<< HEAD
-=======
 		// resolver.setCookieName("my-theme-cookie");
->>>>>>> 7088720c3591da1893de70276853843c88f368dc
 		return resolver;
 	}
 
 	// Theme support end
-<<<<<<< HEAD
-=======
 
->>>>>>> 7088720c3591da1893de70276853843c88f368dc
 	@Override
 	public void configurePathMatch(PathMatchConfigurer configurer) {
 		// TODO Auto-generated method stub
@@ -342,14 +309,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		WebMvcConfigurer.super.addFormatters(registry);
 	}
 
-<<<<<<< HEAD
-=======
 	// @Override
 	// public void addInterceptors(InterceptorRegistry registry) {
 	//// registry.addInterceptor(themeChangeInterceptor());
 	// }
 
->>>>>>> 7088720c3591da1893de70276853843c88f368dc
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		// TODO Auto-generated method stub

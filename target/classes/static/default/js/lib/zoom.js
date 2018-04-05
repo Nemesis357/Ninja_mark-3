@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function () {
     $('.tile')
 	    // tile mouse actions
@@ -23,30 +22,4 @@ $(document).ready(function () {
 	        // set up a background image for each tile based on data-image attribute
 	        .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
     })
-=======
-$(document).ready(function () {
-    $('.tile')
-	    // tile mouse actions
-	    .on('mouseover', function(){
-	      $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
-	      $(this).children('.over').css({'opacity': '0'});
-	    })
-	    .on('mouseout', function(){
-	      $(this).children('.photo').css({'transform': 'scale(1)'});
-	      $(this).children('.over').css({'opacity': '1'});
-	    })
-	    .on('mousemove', function(e){
-	      $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
-	    })
-	    // tiles set up
-	    .each(function(){
-	      $(this)
-	        // add a photo container
-	        .append('<div class="photo"></div>')
-	        // some text just to show zoom level on current item in this example
-	        .append('<div class="over"></div>')
-	        // set up a background image for each tile based on data-image attribute
-	        .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
-    })
->>>>>>> 7088720c3591da1893de70276853843c88f368dc
 })
