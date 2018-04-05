@@ -10,8 +10,6 @@ $(document).ready(function() {
 		    
 		    setTimeout(function(){$(".springAnim").addClass("glitchEffect");}, 5000);
 		    setTimeout(function(){$(".springAnim").removeClass("glitchEffect").addClass("startUpShadow");}, 7000);
-//		    setTimeout(function(){$(".springAnim").addClass("startUpFadeOut");}, 8000);
-		    
 		    
 		    setTimeout(function(){$("#startAnim").addClass("startUpFadeOut");}, 8500);
 		    setTimeout(function(){$("#startAnim").remove();}, 8700);
@@ -20,12 +18,8 @@ $(document).ready(function() {
 		    localStorage.setItem("welcomeShown","true");
 		  }, 500);
 	  }else{
-//	    $(".springAnim").css("opacity",1);
 		  $("#startAnim").remove();
 	  }
-
-//	  $(".btn-explore").addClass("pulse-anim");
-	
 
 	$("#clear").on("click",function(){
 	  localStorage.clear();

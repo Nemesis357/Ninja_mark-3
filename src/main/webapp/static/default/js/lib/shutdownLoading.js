@@ -1,7 +1,5 @@
 $(window).on("load", function() {
 
-	console.log("Loaded!")
-	
 	$("#shutdown").append("<div class='textAnim anim1'>Unauthorized entry detected</div>");
 	$("#shutdown").append("<div class='textAnim anim2'>Notifying authority... &#10004;</div>");
 	setTimeout(function() {

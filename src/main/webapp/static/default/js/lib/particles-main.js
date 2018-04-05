@@ -20,8 +20,6 @@
     });
   } catch (_error) {
     error = _error;
-//    nogl = document.getElementById('nogl');
-//    nogl.style.display = 'block';
   }
 
   if (gl) {

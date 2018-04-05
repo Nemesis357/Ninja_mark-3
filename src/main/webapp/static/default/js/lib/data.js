@@ -26,12 +26,6 @@ $(document).ready(function(){
     $(bar).animate({'width': percentage + '%'}, 2500);
   }
   
-//  function randomiseBar(bar) {
-//    var width =  Math.floor(Math.random() * (100 - 20 + 1)) + 20;
-//    $(bar).animate({'width': width + '%'}, 'slow');
-//    $(bar).attr('data-percentage', width);
-//  }
-  
   function drawMeasure(measure) {
     var percentage = $(measure).data('percentage');
     if(percentage > 100){
@@ -39,12 +33,5 @@ $(document).ready(function(){
     }
     $(measure).animate({'width': percentage + '%'}, 5000);
   }
-  
-//  function randomiseMeasure(measure) {
-//    var width =  Math.floor(Math.random() * (100 - 20 + 1)) + 20;
-//    $(measure).animate({'width': width + '%'}, 'slow');
-//    $(measure).attr('data-percentage', width);
-//  }
-  
   
 });

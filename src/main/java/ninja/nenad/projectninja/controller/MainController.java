@@ -52,9 +52,6 @@ public class MainController {
 			model.setViewName("login");
 			return model;
 		}
-//	public String loginCtrl() {
-//		return "login";
-//	}
 	
 	@RequestMapping(value = { "/shutdown" }, method = RequestMethod.GET)
 	public String shutdownCtrl() {

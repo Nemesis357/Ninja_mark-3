@@ -64,8 +64,6 @@ $(document).ready(function() {
 	    }
 	    
 	    if( !$(".formField").hasClass("errorVal") && $('#name').val() != "" && $('#email').val() != "" && $('#message').val() != "" ) {
-			console.log("No errors!")
-			
 			canSubmit = true;
 			$("#submit").removeClass("submitDisable");
 		} else {
@@ -92,14 +90,12 @@ $(document).ready(function() {
 		e.preventDefault();
 		
 		if ( $(this).hasClass("submitDisable") && !canSubmit ) {
-			console.log("Submit clicked... inside control, hasClass!");
 			return false;
 		}
 		
 		if( !$(".formField").hasClass("errorVal") && $('#name').val() != "" && $('#email').val() != "" && $('#message').val() != "" ) {
-			console.log("All systems are a GO!");
+			return true;
 		} else {
-			console.log("no GO!");
 			$("#submit").addClass("submitDisable");
 			return false;
 		}
@@ -145,8 +141,6 @@ $(document).ready(function() {
         		$("#submit").text("Try again");
         		$("#submit i").remove();
         		$("#submit").addClass("submitDisable");
-	        	console.log("Failed");
-	        	console.log(data)
 	        	
 	        	setTimeout( function(){ 
 	        		$("#submit").removeClass("error sent stand-by");
@@ -167,8 +161,6 @@ $(document).ready(function() {
 	    
 	    var url = '/project-ninja-mk-1/listMessages';
 
-console.log("1");
-	    
 	    $.ajax({
 	    	headers: { 
 	            'Accept': 'application/json',
@@ -184,8 +176,6 @@ console.log("1");
 	        	$("#listMessages").addClass("sent").removeClass("stand-by");
 	        	
 	        	$("#listMessages").text("Listed: ").append("<span class='listedLength'>" + data.length + "</span><i class='fa fa-check' aria-hidden='true'></i>");
-//	        	$("#listMessages").append("<span class='listedLength'>" + data.length + "</span>");
-	        	
 	        	
 	        	$("#site-content").append("<div class='ninjaList'> <div class='ninjaContainer'>");
 	        	
@@ -199,8 +189,6 @@ console.log("1");
 	        error: function(data) {
 	        	$("#listMessages").addClass("error").removeClass("stand-by");
 	        	$("#listMessages").text("Error").append("<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>");
-	        	console.log("Failed");
-	        	console.log(data);
 	        	setTimeout( function(){ 
 	        		$("#listMessages").removeClass("error sent stand-by");
 	        		$("#listMessages").text("Try again");
@@ -231,13 +219,10 @@ console.log("1");
 	        processData: true,
 	        dataType: "json",
 	        success: function (response) {
-//	        	$(".deletedNinja").slideUp(1000);
-	        	
 	        	$(".deletedNinja").remove();
 	        	$(".listedLength").text($(".ninja").length);
 	        },
 	        error: function(data) {
-	        	console.log("Failed");
 	        },
 	    });
 	    

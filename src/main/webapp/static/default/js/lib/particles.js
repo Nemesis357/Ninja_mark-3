@@ -23,8 +23,6 @@
   } catch (error1) {
     error = error1;
     console.log(error);
-//    nogl = document.getElementById('nogl');
-//    nogl.style.display = 'block';
   }
 
   if (gl) {

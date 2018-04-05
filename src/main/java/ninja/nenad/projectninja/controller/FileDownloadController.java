@@ -28,7 +28,6 @@ public class FileDownloadController {
     @RequestMapping(value="/downloadPDF", method = RequestMethod.GET)
     public void downloadFile(HttpServletResponse response) throws IOException {
         File file = null;
-         
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         file = new File(classloader.getResource(INTERNAL_FILE).getFile());
          

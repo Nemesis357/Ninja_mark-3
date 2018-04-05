@@ -13,7 +13,6 @@ public class LangController extends AbstractController{
 	@Override
 	protected ModelAndView handleRequestInternal(HttpServletRequest request,
 		HttpServletResponse response) throws Exception {
-
 		ModelAndView model = new ModelAndView("home");
 		return model;
 	}

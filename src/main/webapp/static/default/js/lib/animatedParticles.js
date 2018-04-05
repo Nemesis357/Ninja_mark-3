@@ -3,8 +3,6 @@ var canvas = document.getElementById('homeAnimation'),
    can_h = parseInt(canvas.getAttribute('height')),
    ctx = canvas.getContext('2d');
 
-// console.log(typeof can_w);
-
 var ball = {
       x: 0,
       y: 0,
