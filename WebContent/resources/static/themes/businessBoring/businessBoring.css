@@ -1,0 +1,339 @@
+body {
+    background-color: #d0d0d0;
+    color: black;
+}
+
+#settingsMenuInner{
+	border: 1px solid #ada793 !important;
+	color: #ada793;
+}
+
+#homeScreen .overlay {
+	background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+	opacity: 0.4;
+}
+
+#socialMenu button {
+	border: 1px solid #ffffff !important;
+}
+
+.menu-item, .menu-open-button {
+	background: #ada794 !important;
+}
+
+.menu-item:hover {
+	color: #ada794 !important;
+}
+
+#settingsMenuToggle {
+	color: #ada794;
+}
+
+#settingsMenuToggle:hover {
+	color: #795548;
+}
+
+/* --- About page --- */
+#site-content .aboutContainerFlex .aboutHeading:after {
+	background-color: #ada793;
+	animation: initial;
+}
+
+#site-content .aboutContainerFlex .about_section_2 p i {
+	color: #ada793;
+}
+
+#site-content .bar span {
+	background-color: #ada793;
+    background: initial;
+    animation: initial;
+}
+
+/* --- Contact page --- */
+
+#bodyBackground {
+	background-image: url("img/desk_3.jpg");
+}
+
+#bodyBackground div {
+	background-color: rgba(0,0,0,0.2);
+}
+
+#formWindow {
+	height: -webkit-fill-available;
+}
+
+#formWindow .formContainer {
+	position: absolute;
+	top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    min-width: 600px;
+    background-color: #2a2529;
+    padding: 67px 35px 69px 36px;
+    color: #ada793;
+}
+
+#formWindow .formContainer:before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	bottom: -10px;
+	left: -10px;
+	right: -10px;
+	background-color: #ada793;
+	z-index: -1;
+}
+
+#formWindow .formContainer:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #2a2529;
+	z-index: -1;
+    box-shadow: 0 0 12px 0px black;
+}
+
+#formWindow .formContainer h2 {
+    text-align: center;
+/*     margin-bottom: 10px; */
+    padding: 10px 0 0 0;
+    font-size: 30px;
+    font-style: italic;
+/*     color: #75732f; */
+}
+
+#formWindow .formContainer .formField input:not([type=submit]), textarea {
+	background-color: #ffffff00;
+    border-bottom: 1px solid #ada793;
+    color: #cacaca;
+    font-size: 15px;
+}
+
+#formWindow label, #formWindow i, #formWindow input, #formWindow textarea {
+/* 	color: #75732f; */
+}
+
+.label-move{
+	top: 0 !important;
+	left: 5px !important;
+	font-size: 15px !important;
+}
+
+.errorVal {
+/* 	box-shadow: 0 0 12px 5px #e50707; */
+/*     border-radius: 7px; */
+	border-right: 1px dashed #e50707;
+    border-left: 1px dashed #e50707;
+    border-radius: 7px;
+    color: #e50707;
+}
+
+
+.aboutContainerInfo {
+	padding: 100px 0;
+}
+
+.wrapperTop {
+	position: relative;
+	background: url("img/businessBG_2.jpg") no-repeat top left;
+	background-size: cover;
+}
+
+.wrapperBody:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#002f4b,#0f5d6b);
+	opacity: .4; 
+}
+
+.wrapperBottom {
+	position: relative;
+	background: url("img/businessBG_4.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+
+.wrapperTop div.bar-wrap label {
+	color: #dcdbdb;
+}
+
+/* Login */
+
+#loginBcg {
+	background: url("img/office.jpg") no-repeat left top; 
+	background-size: cover;
+}
+
+.loginOverlay {
+	background-color: rgba(0,0,0,0.5)
+}
+
+#loginSection {
+	outline: solid 10px #ada793;
+}
+
+.loginContainer {
+    background-color: #151515;
+    color: #e1e1e1;
+}
+
+#loginBtn:after {
+	background-color: #ada793;
+}
+
+#loginBtn:hover {
+	color: #ada793;
+	box-shadow: 0px -1px 10px 2px #ada793;
+}
+
+/* Share */
+.shareActivator {
+    border: 2px solid #ada793;
+}
+
+.shareMenuSlider {
+	background-color: #ada793;
+}
+
+.shareActivator:hover {
+  background: #ada793;
+}
+
+@-webkit-keyframes sharePulse {
+  0% {
+    background: #ada793;
+    transform: scale(1.1);
+  }
+  50% {
+    background: rgba(0,0,0,0.5);
+    transform: scale(1);
+  }
+  100% {
+  	background: #ada793;
+    transform: scale(1.1);
+  }
+}
+
+
+
+/* Projects */
+
+.projectsContainer {
+	outline: 15px solid #ada793;
+}
+
+.projectsContent:after, .projectsContent:before, .projectsHeading:after, .backToTop {
+    background-color: #ada793;
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1280px) {
+	/* 	Contact */
+	#formWindow .formContainer {
+		padding: 55px 25px 30px 25px;
+		min-width: 550px;
+	}
+	#formWindow .formContainer h2 {
+		font-size: 20px;
+	}
+	#formWindow #submitForm .formField{
+		margin-bottom: 10px;
+	}
+	#formWindow #submitForm .formField label:not([for=message]), #formWindow #submitForm .formField label[for=message] {
+		font-size: 13px;
+	}
+	#formWindow #submitForm .formField input:not([type=submit]), #formWindow #submitForm .formField textarea {
+		padding: 8px 15px;
+	}
+	#submitForm .formButton{
+		font-size: 0.8rem;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	#formWindow .formContainer {
+		left: 50%;
+	    width: 90%;
+	    top: 40%;
+	    min-height: 50%;
+	}
+	
+	#homeScreen .homeTitle {
+		padding: 40px 20px;
+	}
+	
+	#homeScreen .homeTitle h1 {
+		font-size: 65px;
+	}
+	
+	#homeScreen .homeTitle h2 {
+		font-size: 45px;
+	}
+	
+	.wrapperBody .aboutContainerInfo {
+		padding: 40px 0;
+	}
+	
+}
+
+@media only screen and (max-width: 768px) {
+	#homeScreen .homeTitle h1 {
+	    font-size: 55px;
+	}
+	#homeScreen .homeTitle h2 {
+	    font-size: 40px;
+	}
+	#site-content .aboutContainerFlex .aboutHeading:after {
+		right: 0;
+	}
+	#formWindow .formContainer {
+		min-width: initial;
+    	top: 50%;
+	}
+	#formWindow #submitForm .formField label:not([for=message]), #formWindow #submitForm .formField label[for=message] {
+		font-size: 11px;
+	}
+	
+	/* 	About */
+	#site-content .wrapperTop {background: url(img/wall.jpg) no-repeat top left; background-size: cover;}
+	.aboutContainerFlex .about_section_1 {order: 3;}
+	.wrapperBody .aboutContainerFlex .about_section_2 {padding-top: 115px;}
+	.sec2_box1 section.data {padding: 0; margin: 0;}
+	.aboutContainerFlex .about_section_1 .activeImage {left: 30px; bottom: 30px;}
+}
+
+@media only screen and (max-width: 500px) {
+	#homeScreen .homeTitle h1 {
+	    font-size: 30px;
+	}
+	#homeScreen .homeTitle h2 {
+	    font-size: 22px;
+	}
+	#bodyBackground {z-index: -3;}
+	#formWindow .formContainer {
+		left: 10px;
+	    right: 10px;
+	    transform: initial;
+	    width: initial;
+	    top: 80px;
+	    padding-bottom: 100px;
+	}
+}
+
+
+
+
+
+	

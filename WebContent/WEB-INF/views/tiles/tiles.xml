@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/views/tiles/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="settingsMenu" value="/WEB-INF/views/tiles/template/settingsMenu.jsp"></put-attribute>
+		<put-attribute name="mainMenu" value="/WEB-INF/views/tiles/template/mainMenu.jsp"></put-attribute>
+		<put-attribute name="socialMenu" value="/WEB-INF/views/tiles/template/socialMenu.jsp"></put-attribute>
+		<put-attribute name="header"
+			value="" />
+		<put-attribute name="menu"
+			value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="" />
+	</definition>
+	
+	<!-- Home Page -->
+	<definition name="home" extends="base.definition">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/home.jsp" />
+	</definition>
+	
+	<!-- About Page -->
+	<definition name="about" extends="base.definition">
+		<put-attribute name="title" value="About Page" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/about.jsp" />
+	</definition>
+	
+	<!-- Contact Page -->
+	<definition name="contact" extends="base.definition">
+		<put-attribute name="title" value="Contact Page" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/contact.jsp" />
+	</definition>
+	
+	<!-- Projects Page -->
+	<definition name="projects" extends="base.definition">
+		<put-attribute name="title" value="Projects Page" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/projects.jsp" />
+	</definition>
+	
+	<!-- Login Page -->
+	<definition name="login" extends="base.definition">
+		<put-attribute name="title" value="Login Page" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />
+	</definition>
+
+</tiles-definitions>
