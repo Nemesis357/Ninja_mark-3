@@ -72,12 +72,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Autowired
 	private Environment env;
 
-	// @Bean
-	// public static PropertySourcesPlaceholderConfigurer
-	// propertySourcesPlaceholderConfigurer() {
-	// return new PropertySourcesPlaceholderConfigurer();
-	// }
-
 	@Bean
 	public JdbcTemplate jdbcTemplate() {
 		return new JdbcTemplate(dataSource());
@@ -91,12 +85,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		ds.setPassword(DB_PASSWORD);
 		ds.setDriverClassName(DB_DRIVER);
 		ds.setUrl(DB_URL);
-
-		// ds.setUsername(env.getProperty("jdbc.username"));
-		// ds.setPassword(env.getProperty("jdbc.password"));
-		// ds.setDriverClassName(env.getProperty("jdbc.driverClassName"));
-		// ds.setUrl(env.getProperty("jdbc.url"));
-
 		return ds;
 	}
 
@@ -105,14 +93,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		return new PropertySourcesPlaceholderConfigurer();
 	}
 
-	// @Bean
-	// public NinjaDao getNinjaDao() {
-	// NinjaDao ninja = new NinjaDaoImpl();
-	// ninja.setDataSource(dataSource());
-	//
-	// return ninja;
-	// }
-	
 	// Email sending service
 	@Bean
 	public JavaMailSender getJavaMailSender() {
@@ -127,35 +107,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	    props.put("mail.smtp.auth", "true");
 	    props.put("mail.smtp.starttls.enable", "true");
 	    props.put("mail.debug", "true");
-	    
-//	    Session mailSession = Session.getDefaultInstance(properties, new Authenticator() {
-//	        public PasswordAuthentication getPasswordAuthentication() {
-//	           //Fill in your data here.
-//	           return new PasswordAuthentication("user", "password");
-//	        }
-//	    });
-	    
-	     
 	    return mailSender;
 	}
 	
-//	@Bean
-//    public Session getSession() {
-//        log.debug("Creating javax.mail.Session with TLS enabled.");
-//        // We could be more flexible and have auth based on whether there's a username and starttls based on a property.
-//        Properties p = new Properties();
-//        p.setProperty("mail.smtp.auth", "true");
-//        p.setProperty("mail.smtp.starttls.enable", "true");
-//        p.setProperty("mail.smtp.host", mailProperties.getHost());
-//        p.setProperty("mail.smtp.port", mailProperties.getPort().toString());
-//        return Session.getDefaultInstance(p, new Authenticator() {
-//            @Override
-//            protected PasswordAuthentication getPasswordAuthentication() {
-//                return new PasswordAuthentication(mailProperties.getUsername(), mailProperties.getPassword());
-//            }
-//        });
-//    }
-
 	@Bean
 	public MessageSource messageSource() {
 		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
@@ -195,20 +149,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		return rmhm;
 	}
 
-	// @Bean
-	// public TilesViewResolver tilesViewResolver() {
-	// TilesViewResolver tilesViewResolver = new TilesViewResolver();
-	// tilesViewResolver.setOrder(2);
-	// return tilesViewResolver;
-	// }
-
 	@Bean
 	public UrlBasedViewResolver urlBasedViewResolver() {
 		UrlBasedViewResolver resolver = new UrlBasedViewResolver();
 		resolver.setPrefix("/WEB-INF/views/pages/");
 		resolver.setSuffix(".jsp");
 		resolver.setViewClass(JstlView.class);
-		// resolver.setViewClass(TilesView.class);
 		return resolver;
 	}
 
@@ -224,13 +170,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("home");
 	}
-
-	// @Bean
-	// public DefaultAnnotationHandlerMapping defaultAnnotationHandlerMapping(){
-	// DefaultAnnotationHandlerMapping bean = new DefaultAnnotationHandlerMapping();
-	// bean.setUseDefaultSuffixPattern(false);
-	// return bean;
-	// }
 
 	/**
 	 * Configure ViewResolvers to deliver preferred views.
@@ -253,7 +192,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
 		// TODO Auto-generated method stub
-//		WebMvcConfigurer.super.configureDefaultServletHandling(configurer);
 		configurer.enable();
 	}
 
@@ -261,7 +199,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Bean
 	public ResourceBundleThemeSource themeSource() {
 		ResourceBundleThemeSource themeSource = new ResourceBundleThemeSource();
-		// themeSource.setDefaultEncoding("UTF-8");
 		themeSource.setBasenamePrefix("properties/theme-");
 		return themeSource;
 	}
@@ -279,12 +216,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		resolver.setCookieMaxAge(2400);
 		resolver.setCookieName("mythemecookie");
 		resolver.setDefaultThemeName("businessBoring");
-		// resolver.setCookieName("my-theme-cookie");
 		return resolver;
 	}
 
 	// Theme support end
-
 	@Override
 	public void configurePathMatch(PathMatchConfigurer configurer) {
 		// TODO Auto-generated method stub
@@ -308,11 +243,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		// TODO Auto-generated method stub
 		WebMvcConfigurer.super.addFormatters(registry);
 	}
-
-	// @Override
-	// public void addInterceptors(InterceptorRegistry registry) {
-	//// registry.addInterceptor(themeChangeInterceptor());
-	// }
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {

@@ -8,7 +8,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-//.access("hasRole('ROLE_ADMIN') or hasRole('ROLE_DBA')")
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -23,13 +22,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	                .loginPage("/login")
 	                .defaultSuccessUrl("/contact")
 	                .failureUrl("/shutdown")
-//	                .permitAll()
 	                .usernameParameter("username").passwordParameter("password")	
 	                .and()
 	            .logout()
 	                .permitAll();
-//	                .and()
-//	            .csrf().disable();
 	    }
 
 	 
